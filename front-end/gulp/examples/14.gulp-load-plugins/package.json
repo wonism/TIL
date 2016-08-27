@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "gulp-autoprefixer" : "*",
+    "gulp-clean-css" : "*",
+    "gulp-coffee" : "*",
+    "gulp-concat" : "*",
+    "gulp-plumber" : "*",
+    "gulp-sass" : "*",
+    "gulp-sourcemaps" : "*",
+    "gulp-uglify" : "*",
+    "gulp-util" : "*"
+  }
+}

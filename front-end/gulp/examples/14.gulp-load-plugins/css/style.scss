@@ -1,0 +1,12 @@
+button {
+  display: flex;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  opacity: .8;
+  appearance: none;
+  &:hover {
+    opacity: 1;
+    background-color: #f085ab;
+  }
+}
+

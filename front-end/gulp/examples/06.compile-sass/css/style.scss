@@ -1,0 +1,10 @@
+$main-color: #fdadcd;
+$sub-color: #d0c0f0;
+
+body {
+  background-color: $main-color;
+  p {
+    color: $sub-color;
+    font-style: italic;
+  }
+}

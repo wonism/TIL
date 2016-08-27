@@ -1,0 +1,1 @@
+function uglify(){console.log("Uglify Me!");var o=0;console.log(o)}

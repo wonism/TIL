@@ -1,0 +1,1 @@
+(function(){var o;(o=function(){console.log("Hello, Coffee!")})()}).call(this);
