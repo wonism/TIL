@@ -1,4 +1,5 @@
 # Web App with Django
+참고 : http://django-book.readthedocs.io/en/latest/index.html
 
 ## Environment
 - OS : OSX
@@ -47,6 +48,4 @@ $ python3 manage.py runserver
 # If you change port, command this line.
 $ python3 manage.py runserver 8080
 ```
-
-
 
