@@ -1,8 +1,6 @@
 # TIL (Today I Learned)
 > 📝 Today I Learned
 
----
-
 ## Contents
 ### Front-end
 - [Gulp](https://github.com/wonism/TIL/tree/master/front-end/gulp)
@@ -10,7 +8,7 @@
 - [TypeScript](https://github.com/wonism/TIL/tree/master/front-end/typescript)
 - [Webpack](https://github.com/wonism/TIL/tree/master/front-end/webpack)
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries)
-  - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/pdfmake)
+  - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/libraries/pdfmake)
 
 ### Back-end
 - [Node.JS](https://github.com/wonism/TIL/tree/master/back-end/nodejs)
@@ -21,12 +19,12 @@
   - [Use HTTPS at localhost](https://github.com/wonism/TIL/tree/master/back-end/nodejs/https-localhost)
 - [Nginx](https://github.com/wonism/TIL/tree/master/back-end/nginx)
   - [Use HTTPS with Let's Encrypt](https://github.com/wonism/TIL/tree/master/back-end/nginx/lets-encrypt-example)
-- [Python](https://github.com/wonism/TIL/tree/master/python)
+- [Python](https://github.com/wonism/TIL/tree/master/back-end/python)
   - [Django](https://github.com/wonism/TIL/tree/master/back-end/python/django)
 
 ### Operating System
-- OS X
-  - Copy & Paste the contents in command lines
+- [OS X](https://github.com/wonism/TIL/tree/master/os/osx)
+  - [Copy & Paste the contents in command lines](https://github.com/wonism/TIL/tree/master/os/osx/pbcopy)
 
 ## I will add..
 __Front-end__
@@ -43,6 +41,7 @@ __Back-end__
 __Operating System__
 
 __HTTP__
+
 
 ## I want to learn..
 __Front-end__
