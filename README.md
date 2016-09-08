@@ -17,6 +17,7 @@
   - [Upload image to AWS S3](https://github.com/wonism/TIL/tree/master/back-end/nodejs/s3-image-upload)
   - [Use sequelize and sequelize-cli to use MySQL](https://github.com/wonism/TIL/tree/master/back-end/nodejs/sequelize-cli-example)
   - [Use HTTPS at localhost](https://github.com/wonism/TIL/tree/master/back-end/nodejs/https-localhost)
+  - [Internationalization with i18n](https://github.com/wonism/TIL/tree/master/back-end/nodejs/i18n)
 - [Nginx](https://github.com/wonism/TIL/tree/master/back-end/nginx)
   - [Use HTTPS with Let's Encrypt](https://github.com/wonism/TIL/tree/master/back-end/nginx/lets-encrypt-example)
 - [Python](https://github.com/wonism/TIL/tree/master/back-end/python)
@@ -25,12 +26,16 @@
 ### Operating System
 - [OS X](https://github.com/wonism/TIL/tree/master/os/osx)
   - [Copy & Paste the contents in command lines](https://github.com/wonism/TIL/tree/master/os/osx/pbcopy)
+  - [Compress Files in CLI](https://github.com/wonism/TIL/tree/master/os/osx/compress-files)
+
+### Cloud
+- [AWS](https://github.com/wonism/TIL/tree/master/cloud/aws)
+  - [Node JS in Elastic Beanstalk : My experience](https://github.com/wonism/TIL/tree/master/cloud/aws/node-js)
 
 ## I will add..
 __Front-end__
 - ECMA Script 2015
 - SASS
-- Webpack
 
 __Back-end__
 - Ruby on Rails
