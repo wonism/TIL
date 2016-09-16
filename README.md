@@ -56,6 +56,8 @@ __Front-end__
 - canvas
 - svg
 - webgl
+- Web Bluetooth
+  - https://medium.com/@urish/is-now-a-good-time-to-start-using-web-bluetooth-hint-yes-yes-it-is-99e998d7b9f6#.6hlob36cp
 
 __Back-end__
 - Hapi JS (Node.JS)
@@ -64,6 +66,10 @@ __Back-end__
 
 __Language__
 - Rust
+
+__IDE__
+- Atom
+  - http://ddtomorrow.com/essential-plugins-atom/
 
 __Operating System__
 
