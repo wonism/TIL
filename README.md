@@ -10,6 +10,7 @@
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries)
   - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/libraries/pdfmake)
 - [HTML5](https://github.com/wonism/TIL/tree/master/front-end/html)
+- [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 
 ### Back-end
 - [Node.JS](https://github.com/wonism/TIL/tree/master/back-end/nodejs)
@@ -58,10 +59,13 @@ __Front-end__
 - webgl
 - Web Bluetooth
   - https://medium.com/@urish/is-now-a-good-time-to-start-using-web-bluetooth-hint-yes-yes-it-is-99e998d7b9f6#.6hlob36cp
+- Client Side Template Engine
+  - http://garann.github.io/template-chooser
 
 __Back-end__
 - Hapi JS (Node.JS)
 - Flask (Python)
+  - https://www.youtube.com/playlist?list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV
 - Play 2 (Scala)
 
 __Language__
