@@ -303,3 +303,181 @@ var person = {
 };
 ```
 
+### 객체
+- 객체는 `key-value` 로 이루어져있으며, 값으로 원시 데이터 타입이나 객체, 함수(메소드)가 올 수 있다.
+#### 빈 객체로 시작하여 속성 추가하기
+```js
+// 빈 객체 정의
+var dog = {};
+
+// 프로퍼티 추가
+dog.name = 'Bingo';
+
+// 메소드 추가
+dog.getName = function () {
+  return 'Foo';
+};
+
+// 메소드 수정
+dog.getName = function () {
+  return this.name;
+};
+
+// 메소드 삭제
+delete dog.name;
+```
+
+#### 객체 리터럴
+```js
+var dog = {
+  name: 'Bingo',
+  getName: function () {
+    return this.name;
+  }
+};
+// 객체를 중괄호로 감싸며, 내부에 프로퍼티와 메소드를 쉼표로 분리한다.
+// 마지막 key-value 에 쉼표가 들어가면 IE 에서 에러가 발생한다.
+// 프로퍼티명과 값은 : 로 분리한다.
+```
+
+#### 생성자 함수로 객체 생성하기
+- 안티패턴이다.
+```js
+var car = new Object();
+car.color = 'white';
+car.driver = 'Alex';
+```
+
+#### 사용자 정의 생성자 함수
+- 객체 리터럴 패턴이나 내장 생성자 함수 외에도 생성자 함수를 만들어 객체를 생성할 수도 있다.
+- 이 때, 생성자 함수의 이름은 PascalCase 로 작성한다.
+```js
+function Person(name) {
+  this.name = name;
+  this.say = function () {
+    return 'Hello, I\'m ' + this.name + '.';
+  };
+}
+
+var p1 = new Person('Bob');
+console.log(p.say()); // Hello, I'm Bob.
+```
+- new 와 함께 생성자 함수를 호출하면, 함수 안에서 다음과 같은 일이 발생한다.
+  - 빈 객체가 생성되며, 이는 this 라는 변수로 참조할 수 있다.
+  - 생성된 객체는 해당 함수의 프로토타입을 상속받는다.
+  - this 로 참조되는 객체에 프로퍼티와 메소드가 추가된다.
+  - 마지막에 다른 객체가 명시적으로 반환되지 않을 경우, this 로 참조된 이 객체가 반환된다.
+- 위 코드가 다음과 같다고 볼 수 있다.
+```js
+function Person(name) {
+  // var this = {};
+  // 라고 볼 수도 있지만, Person 의 프로토타입을 상속받기 때문에 더 정확히 말하면, 다음과 같다고 볼 수 있다.
+  // var this = Object.create(Person.prototype);
+
+  this.name = name;
+  this.say = function () {
+    return 'Hello, I\'m ' + this.name + '.';
+  };
+
+  // return this;
+}
+```
+- 위 코드를 보면, say 라는 메소드가 정의된 것을 볼 수 있다.
+  - 이로 인해 `new Person()` 을 실행할 때마다, 메모리에 새로운 함수가 생성된다.
+  - 메소드 `say` 는 모든 인스턴스가 공통으로 사용하기 때문에 이런 방식으로 메소드를 만드는 것은 좋지 않다.
+  - 이를 개선하면 다음과 같다.
+```js
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.say = function () {
+  return 'Hello, I\'m ' + this.name + '.';
+};
+```
+- 위에서 설명한 것처럼, 함수 내에 `return` 을 사용하지 않아도 암묵적으로 `this` 를 반환한다. 하지만, 반환될 값이 될 객체를 따로 정할 수도 있다.
+  - 아래 코드에서 `this` 에 `name` 프로퍼티를 추가해도 `that` 을 선언하고 반환하기 때문에 없는 코드나 마찬가지이다.
+  - 객체가 아닌 것을 반환하면 에러는 아니지만, 무시되고, `this` 가 반환된다.
+```js
+function People() {
+  this.name = 'Charles';
+
+  var that = {};
+  that.name = 'David';
+  return that;
+}
+
+var p = new People();
+console.log(p.name); // David
+```
+- `new` 를 사용하지 않으면, 함수 내의 `this` 가 전역 객체를 가리키게 된다.
+  - ECMAScript 5 에서는 이런 문제에 대한 해결책으로, strict 모드에서 `this`가 전역 객체를 가리키지 않도록 한다.
+```js
+function Car() {
+  this.color = 'red';
+}
+
+var c1 = new Car();
+console.log(typeof c1); // object
+console.log(c1.color); // red
+
+/* ANTI PATTERN */
+var c2 = Car();
+console.log(typeof c2); // undefined
+console.log(window.color); // red
+```
+
+__that 의 사용__
+- 생성자가 항상 생성자로 동작하도록 해주는 2 가지 패턴이 있다.
+- 첫 번째는 this 에 모든 멤버를 추가하는 대신, that 에 모든 멤버를 추가하고, that 을 반환하는 방법이다.
+```js
+function Car() {
+  var that = {};
+  that.color = 'blue';
+  return that;
+}
+```
+- 두 번째는 객체 리터럴을 통해 객체를 반환하는 방법이다.
+```js
+functino Car() {
+  return {
+    color: 'blue'
+  };
+}
+```
+- 이 두 가지 방법을 사용하면, `new` 를 사용하지 않아도 된다.
+```js
+var c1 = Car();
+console.log(c1.color); // blue
+```
+- 하지만, 프로토타입과의 연결고리를 잃게 되며, 프로토타입에 추가한 멤버를 객체가 사용할 수 없게 된다.
+
+#### 스스로를 호출하는 생성자
+- 앞서 설명한 패턴의 문제점을 해결하는 방법으로 다음과 같은 방법이 있다.
+  - 생성자 내부에서 this 가 해당 생성자의 인스턴스인지 확인하고, 그렇지 않은 경우 new 와 함께 스스로를 재호출한다.
+```js
+function Car() {
+  if (!(this instanceof Car)) {
+    return new Car();
+  }
+  // 인스턴스를 판별하는 또 다른 방법으로 arguments.callee 와 비교하는 방법이 있다.
+  // 단, ES5 의 strict 모드에서는 허용되지 않는다.
+  // if (!(this instanceof arguments.callee)) {
+
+  this.color: 'black';
+}
+
+Car.prototype.move = function () {
+  return true;
+};
+
+var c1 = new Car(),
+    c2 = Car();
+
+console.log(c1.color); // black
+console.log(c2.color); // black
+
+console.log(c1.move()); // true
+console.log(c2.move()); // true
+```
+
