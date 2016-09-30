@@ -39,6 +39,10 @@ $ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset
 - [컴퍼넌트 생명주기](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/05.component-lifecycle.md)
 - [router](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/07.router.md)
 
+
+## 기타
+- [this.props.children](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/children.md)
+
 ## Project 및 설정파일 살펴보기
 - 프로젝트의 대략적인 hierarchy 를 살펴보면 다음과 같다.
 ```sh
