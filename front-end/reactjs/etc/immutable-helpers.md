@@ -1,11 +1,8 @@
 # Immutable helpers
-- `Immutable helpers` 는 데이터를 효율적으로 수정할 수 있게 해주는
-  페이스북의 [immutable-js](https://github.com/facebook/immutable-js/)
-를 사용한다.
+- `Immutable helpers` 는 데이터를 효율적으로 수정할 수 있게 해주는 페이스북의 [immutable-js](https://github.com/facebook/immutable-js/) 를 사용한다.
 
 ## Immutable helpers 설치 및 적용
-- `react` 개발 환경이 다 갖추어져있다는 가정 하에 설명을 하며, ES 2015
-  문법을 사용한다.
+- `react` 개발 환경이 다 갖추어져있다는 가정 하에 설명을 하며, ES 2015 문법을 사용한다.
 - `react-addons-update` 모듈을 설치 및 추가한다.
 ```sh
 $ npm i -S react-addons-update
@@ -151,8 +148,7 @@ class Sample extends Component {
 ReactDOM.render(<Sample />, root);
 ```
 - 이와 같은 문제를 해소하기 위해 `Immutable helpers`와 React 생명주기 중 하나인 `shouldComponentUpdate` 를 사용한다.
-- `shouldComponentUpdate` 는 새로운 `props` 또는 `state` 를 받아 렌더링을 하기 전에 호출되며, 최초렌더링 또는 `forceUpdate` 로 인한
-렌더링 시에는 호출되지 않는다.
+- `shouldComponentUpdate` 는 새로운 `props` 또는 `state` 를 받아 렌더링을 하기 전에 호출되며, 최초렌더링 또는 `forceUpdate` 로 인한 렌더링 시에는 호출되지 않는다.
 - `shouldComponentUpdate` 의 반환값이 `true` 면 컴퍼넌트를 업데이트하며, `false` 면 컴퍼넌트를 업데이트하지 않는다.
   - `shouldComponentUpdate` 는 기본적으로 `true` 를 반환한다.
 

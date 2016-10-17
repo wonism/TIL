@@ -30,6 +30,8 @@
 - [OS X](https://github.com/wonism/TIL/tree/master/os/osx)
   - [Copy & Paste the contents in command lines](https://github.com/wonism/TIL/tree/master/os/osx/pbcopy)
   - [Compress Files in CLI](https://github.com/wonism/TIL/tree/master/os/osx/compress-files)
+- [Linux](https://github.com/wonism/TIL/tree/master/os/linux)
+  - [Show top commands in CLI](https://github.com/wonism/TIL/tree/master/os/linux/top-commands)
 
 ### Cloud
 - [AWS](https://github.com/wonism/TIL/tree/master/cloud/aws)
