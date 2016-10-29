@@ -39,8 +39,8 @@ $ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset
 - [컴퍼넌트 생명주기](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/05.component-lifecycle.md)
 - [router](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/07.router.md)
 
-
 ## 기타
+- [Trouble Shooting](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/trouble-shootings.md)
 - [this.props.children](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/children.md)
 - [Immutable helpers](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/immutable-helpers.md)
 
