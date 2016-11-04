@@ -12,6 +12,7 @@
 - [HTML5](https://github.com/wonism/TIL/tree/master/front-end/html)
 - [Handlebars](https://github.com/wonism/TIL/tree/master/front-end/handlebars)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
+- [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
 ### Back-end
 - [Node.JS](https://github.com/wonism/TIL/tree/master/back-end/nodejs)
