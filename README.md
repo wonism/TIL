@@ -39,6 +39,11 @@
 - [AWS](https://github.com/wonism/TIL/tree/master/cloud/aws)
   - [Node JS in Elastic Beanstalk : My experience](https://github.com/wonism/TIL/tree/master/cloud/aws/node-js)
 
+### IDE
+- [VIM](https://github.com/wonism/TIL/tree/master/vim)
+  - [VIM Cheat Sheet](https://github.com/wonism/TIL/tree/master/vim/cheat-sheet.md)
+  - [Useful VIM Settings](https://github.com/wonism/TIL/tree/master/vim/settings.md)
+
 ## I will add..
 __Front-end__
 - ECMA Script 2015
