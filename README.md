@@ -41,8 +41,8 @@
 
 ### IDE
 - [VIM](https://github.com/wonism/TIL/tree/master/vim)
-  - [VIM Cheat Sheet](https://github.com/wonism/TIL/tree/master/vim/cheat-sheet.md)
-  - [Useful VIM Settings](https://github.com/wonism/TIL/tree/master/vim/settings.md)
+  - [VIM Cheat Sheet](https://github.com/wonism/TIL/tree/master/ide/vim/cheat-sheet.md)
+  - [Useful VIM Settings](https://github.com/wonism/TIL/tree/master/ide/vim/settings.md)
 
 ## I will add..
 __Front-end__
