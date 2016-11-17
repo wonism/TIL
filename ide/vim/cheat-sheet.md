@@ -55,7 +55,7 @@ __텍스트 에디트__
 __검색 및 치환__
 - /regexp : regexp 를 검색
 - :s/regexp/text : 현재 라인에서 `regexp` 에 맞는 텍스트를 `text` 로 치환함
-- :1,5,s/regexp/text/gmi : 1 번째 줄부터 5 번째 줄까지 `regexp` 에 맞는 텍스트를 `text` 로 치환함
+- :1,5,s/regexp/text/gmi`(Regular expression flag)` : 1 번째 줄부터 5 번째 줄까지 `regexp` 에 맞는 텍스트를 `text` 로 치환함
 - :%s/regexp/text/g : 현재 파일의 모든 `regexp` 에 맞는 텍스트를 `text` 로 치환함
 
 __저장 및 종료__
