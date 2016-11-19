@@ -10,6 +10,7 @@
 - webpack development server 설정하기
 - 템플릿 사용하기
 - (배포용) 정적 자원 버전 관리하기
+- jQuery 등 External Library 사용하기
 
 ## 기본 사용 방법
 __webpack 설치__
@@ -89,6 +90,8 @@ $ webpack --watch
 $ webpack -w
 ```
 
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
+
 ## 여러개의 entry 파일로 번들 파일 생성하기
 <p>엔트리 파일 a.js 와 b.js 를 작성한다.</p>
 
@@ -142,6 +145,8 @@ apple.bundle.js  1.55 kB       0  [emitted]  apple
 ```
 
 <p>dist 디렉토리에 apple.bundle.js 와 bear.bundle.js 파일이 생성된 것을 볼 수 있다.</p>
+
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
 
 ## 로더 추가하기
 <p>webpack 의 로더는 babel-loader 등의 로더를 통해 다양한 리소스를 불러올 수 있다.</p>
@@ -221,6 +226,8 @@ apple.bundle.js  2.12 kB       0  [emitted]  apple
     + 2 hidden modules
 ```
 
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
+
 ## Lint / Hint 사용하기
 <p>이 튜토리얼에서는 JS 코드 검사도구로 jshint 를 사용한다.</p>
 
@@ -274,6 +281,8 @@ jshint results in errors
 extensions (use moz). @ line 1 char 1
     let a;
 ```
+
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
 
 ## webpack development server 설정하기
 <p>webpack dev server 를 통해, 코드를 수정하고 확인할 때마다 브라우저를 새로고침하는 수고를 덜 수 있다.</p>
@@ -337,6 +346,8 @@ $ webpack-dev-server --hot --host 0.0.0.0
 ```
 
 <p>http://localhost:7777/ 에 접속하면, 우리가 작성한 웹 페이지를 볼 수 있다.<br />src 밑에 있는 파일들이 수정될 때마다, webpack 은 이를 감지하고, 페이지를 새로고침하지 않고도 새로 작성된 코드가 브라우저에 반영되는 것을 볼 수 있다.</p>
+
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
 
 ## 템플릿 사용하기
 <p>jade, ejs, handlebars 등 다양한 템플릿이 존재한다. 이 예제에서는 ejs 를 사용한다.</p>
@@ -424,6 +435,8 @@ import './views/index.ejs';
 `webpack-dev-server --hot --host 0.0.0.0` 명령어를 실행하면, `I am a
 Partial EJS !!` 라고 쓰여 있는 `<h1>` 태그를 볼 수 있다.
 
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
+
 ## (배포용) 정적 자원 버전 관리하기
 <p>HTTP 스펙에 따르면, 필요에 따라 브라우저가 CSS, JS 등의 정적 자원을 캐싱하게 할 수 있다. 이 때, 성능향상을 위한 Long term caching 을 위해서는 브라우저에 캐싱된 파일이 최신 버전인지 알 수 있는 방법이 필요하다. 그 방법은 파일명 suffix 로 해시값을 붙이는 것이다. (참조 : <a href="https://webpack.github.io/docs/long-term-caching.html">Webpack 공식 문서</a>)</p>
 <p>파일명에 해시값을 붙이기 위해서는, `output.filename` 에 `[name].[chunkhash].js` 등과 같이 `[chunkhash]` 를 넣어주기만 하면 된다.<br />생성된 해시값을 저장하기 위해서 `fs` 모듈을 사용할 수 있으며, 자세한 내용은 아래에서 살펴보겠다.</p>
@@ -504,4 +517,24 @@ module.exports = {
 </body>
 </html>
 ```
+
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
+
+## jQuery 등 External Library 사용하기
+```js
+module.exports = {
+  /***** 생략 *****/
+  externals: {
+    "$": "jQuery",
+    "jQuery": "jQuery",
+    "_": "lodash",
+    "react": "React",
+    "react-dom": "ReactDOM",
+    /***** 생략 *****/
+  },
+};
+```
+<p>externals 라는 property 에 위와 같은 방식으로 명시를 해준다.</p>
+
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
 
