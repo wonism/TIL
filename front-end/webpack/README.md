@@ -3,14 +3,14 @@
 <p><a href="https://webpack.github.io/docs">Webpack</a> 은 두 그룹의 명세를 모두 지원하는 Java Script 모듈화 도구로 로더를 추가할 수도 있고, 컴파일 속도도 빠르다는 장점이 있다.</p>
 
 ## 목차
-- 기본 사용 방법
-- 여러개의 entry 파일로 번들 파일 생성하기
-- 로더 추가하기
-- Lint / Hint 사용하기
-- webpack development server 설정하기
-- 템플릿 사용하기
-- (배포용) 정적 자원 버전 관리하기
-- jQuery 등 External Library 사용하기
+- 기본 사용 방법 [(바로 가기)](#기본-사용-방법)
+- 여러개의 entry 파일로 번들 파일 생성하기 [(바로 가기)](#여러개의-entry-파일로-번들-파일-생성하기)
+- 로더 추가하기 [(바로 가기)](#로더-추가하기)
+- Lint / Hint 사용하기 [(바로 가기)](#lint--hint-사용하기)
+- webpack development server 설정하기 [(바로 가기)](#webpack-development-server-설정하기)
+- 템플릿 사용하기 [(바로 가기)](#템플릿-사용하기)
+- (배포용) 정적 자원 버전 관리하기 [(바로 가기)](#배포용-정적-자원-버전-관리하기)
+- jQuery 등 External Library 사용하기 [(바로 가기)](#jquery-등-external-library-사용하기)
 
 ## 기본 사용 방법
 __webpack 설치__
@@ -480,6 +480,7 @@ module.exports = {
   /***** 생략 *****/
   output: {
     path: path.join(__dirname, 'public'),
+    publicPath: '/',
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js'
   },
@@ -492,6 +493,8 @@ module.exports = {
 - `ChunkManifestPlugin` 는 chunk ID 를 JSON 파일로 내보낼 수 있다.
   - `filename` 의 기본값은 `manifest.json` 이다.
 - HtmlWebpackPlugin 에서 템플릿으로 사용할 `index.ejs` 파일과 생성될 html 파일명을 명시한다. 이 옵션으로 index.html 이 만들어지며, `</body>` 앞에 번들링된 JS 파일을 불러오는 `<script>` 태그가 자동으로 붙는다.
+- `publicPath: '/'` 를 추가함으로써, 정적자원들의 주소를 상대경로가 아닌 절대경로로 바꿔줄 수 있다. `publicPath` 를 설정하지 않으면, `</body>` 앞에 추가되는 정적파일의 경로가 상대경로로 잡히게 되며, 정적자원들을 제대로 불러오지 못하는 경우가 발생한다.
+  - (Client Side Router 를 사용하면서, `publicPath` 를 지정하지 않아 문제가 발생한 경험이 있다.)
 
 ```ejs
 <!DOCTYPE>
