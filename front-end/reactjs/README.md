@@ -43,6 +43,7 @@ $ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset
 - [Trouble Shooting](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/trouble-shootings.md)
 - [this.props.children](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/children.md)
 - [Immutable helpers](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/immutable-helpers.md)
+- [React Facebook Login Lib](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/facebook-login.md)
 
 ## Project 및 설정파일 살펴보기
 - 프로젝트의 대략적인 hierarchy 를 살펴보면 다음과 같다.
