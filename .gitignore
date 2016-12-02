@@ -23,6 +23,10 @@ bower_components
 # configure
 config/
 
+# not completed...
+cs/
+cpp/
+
 dump.rdb
 nohup.out
 
