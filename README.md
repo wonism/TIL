@@ -26,6 +26,8 @@
   - [Internationalization with i18n](https://github.com/wonism/TIL/tree/master/back-end/nodejs/i18n)
 - [Nginx](https://github.com/wonism/TIL/tree/master/back-end/nginx)
   - [Use HTTPS with Let's Encrypt](https://github.com/wonism/TIL/tree/master/back-end/nginx/lets-encrypt-example)
+  - [Update Nginx in Ubuntu 14.04](https://github.com/wonism/TIL/tree/master/back-end/nginx/update-nginx)
+  - [Use HTTP/2 with Nginx](https://github.com/wonism/TIL/tree/master/back-end/nginx/http2)
 - [Python](https://github.com/wonism/TIL/tree/master/back-end/python)
   - [Django](https://github.com/wonism/TIL/tree/master/back-end/python/django)
 - [React Router 사용하기](https://github.com/wonism/TIL/tree/master/back-end/react-router)
