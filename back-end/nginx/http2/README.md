@@ -70,6 +70,7 @@ $ nginx
 $ nginx -V
 ```
 - 참고 (ALPN 및 NPM 에 대한 OS 별 지원현황)
+
 | OS | System Open SSL | ALPN / NPN Support |
 | :-- | :-- | :-- |
 | CentOS/Oracle Linux/RHEL 5.10+ | 0.9.8e | Neither |
