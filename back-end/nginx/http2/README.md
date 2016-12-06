@@ -8,6 +8,10 @@ Nginx 1.10.1 (Nginx 1.9.5 이상)
 (+) SSL 은 적용되었다고 가정한다.
 ```
 
+- 아래 링크는 Let's Encrypt 로 HTTPS 를 적용하는 방법에 대한 링크다.
+  - [링크](https://github.com/wonism/TIL/tree/master/back-end/nginx/lets-encrypt-example)
+  - 이 글을 작성할 당시와 설정 방법이 조금 다르지만 차이가 심할 정도는 아니니, 이 글 또는 구글링을 통해 적용하도록 한다.
+
 ## Open SSL 1.0.2 설치
 - 먼저, Open SSL 1.0.2 를 설치한다.
 - 최신 버전의 크롬에서는 ALPN 만 지원하는데, ALPN 을 사용하지 않으면, 최신 버전 크롬 사용자의 브라우저는 HTTP/1 로 다운그레이드 된다. (즉, HTTP/2 를 사용할 수 없다.)

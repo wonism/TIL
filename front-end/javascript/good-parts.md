@@ -1,8 +1,15 @@
 # Java Script - The good parts
 
-<img src="https://github.com/wonism/TIL/blob/master/front-end/javascript/js-the-good-parts.jpg" align="center" />
+<p align="center"><img src="https://github.com/wonism/TIL/blob/master/front-end/javascript/js-the-good-parts.jpg" width="160" height="209" align="center" /></p>
 
 - "자바스크립트 핵심 가이드, 더글라스 크락포드 저 (김명신 역) (O'Reilly / 한빛 미디어). Copyright 2008 HANBIT Media, Inc., 9788979145984." 의 일부와 MDN 를 참고하며 정리한 내용입니다.
+
+## 목차
+- 자바스크립트 객체 [(바로 가기)](#자바스크립트-객체)
+  - 객체 리터럴 [(바로 가기)](#객체-리터럴)
+  - 객체의 복사 [(바로 가기)](#객체의-복사)
+  - 객체의 리플렉션과 열거 [(바로 가기)](#객체의-리플렉션과-열거)
+  - 객체 속성의 삭제 [(바로 가기)](#객체-속성의-삭제)
 
 ## 자바스크립트 객체
 - 자바스크립트에서 단순한 데이터 타입은 숫자, 스트링, 불리언, undefined 가 있으며, 이들을 제외한 타입은 모두 객체이다.
@@ -45,6 +52,8 @@ if (boughtHouse) {
   console.log(person.address); // Seoul Gangnam
 }
 ```
+
+[목차로 가기](#목차)
 
 ### 객체의 복사
 - 객체는 참조 방식으로 전달되며, 결코 복사되지 않는다.
@@ -99,6 +108,8 @@ if (typeof Object.create !== 'function') {
   })();
 }
 ```
+
+[목차로 가기](#목차)
 
 ### 객체의 리플렉션과 열거
 - 객체에 어떤 속성들이 있는지 확인하기 위해서는 `for (let key in objectName)` 을 사용한다.
@@ -200,6 +211,8 @@ for (let i = 0, len = arr.length; i < len; i++) {
 // 1 | 2
 // x | 3
 ```
+
+[목차로 가기](#목차)
 
 ### 객체 속성의 삭제
 - 객체의 속성을 삭제하려면, `delete` 연산자를 사용한다.
