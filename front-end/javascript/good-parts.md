@@ -233,7 +233,6 @@ delete person2.name;
 console.log(person2.name); // Jaewon
 ```
 
-<!--
 ## 자바스크립트 함수
 - 자바스크립트 함수는 lexical scope (어휘적 범위)를 가지는 일급 객체(first class object) 이다.
   - 일급 객체는 속성 및 메소드를 가질 수 있는 객체이다.
@@ -242,5 +241,126 @@ console.log(person2.name); // Jaewon
 __함수와 일급 객체__
 - 자바스크립트 함수는 일급 객체로써, 함수를 주고받을 수 있으며 이로 인해, 고차 함수가 가능해진다.
 - `Array` 의 메소드인 `map`, `every`, `filter`, `sort` 등을 사용할 때도 인자로 함수를 넘겨주면 배열을 편리하게 처리할 수 있다.
--->
+
+__화살표 함수 표현__
+- 화살표 함수 표현은 ECMA Script 2015 에서 제안된 함수 표현식으로 `(...args) => { /* Statement */ }` 와 같이 사용한다.
+- 화살표 함수 표현은 function 표현에 비해 구문이 짧고, 자신의 `this`, `arguments`, `super` 또는 `new.target` 을 바인딩하지 않는다.
+  - 화살표 함수는 항상 익명이기 때문에 메소드 함수가 아닌 곳에 적당하며, 생성자로 사용할 수 없다.
+- 아래 링크는 MDN 의 화살표 함수에 대한 링크이다.
+  - [링크](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)
+
+__함수와 클로저__
+- 클로저는 lexical scope 로 인해 독립적인 변수를 가리키는 함수로, 클로저 안에 정의된 함수는 만들어진 환경(lexical environment) 를 기억한다.
+- 아래 링크는 클로저에 대한 글이다.
+  - [링크](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
+
+### 함수 객체
+- (객체 리터럴로 생성되는) 일반 객체와 달리 함수는 `Function.prototype` 에 연결된다. (`Function` 은 `Object.prototype` 에 연결된다.)
+- `functionName.prototype` 을 확인해보면 `Object` 가 나오는데, 이 `Object` 에는 `functionName` 함수 자체를 값으로 갖는 `constructor` 속성이 있다.
+- 함수는 객체이므로, 변수나 객체, 배열에 할당할 수 있으며, 다른 함수에 전달되는 인자 혹은 함수의 반환값으로 사용할 수도 있다.
+
+### 함수의 호출
+- 함수는 호출되면, `this` 와 `arguments` 라는 매개변수를 받게 된다.
+  - `this` 는 호출하는 패턴에 의해 결정된다.
+  - `arguments` 는 함수가 호출될 때 전달된 모든 인자들을 담은 객체다.
+    - `Array` 와 비슷하지만, `length` 속성을 제외하곤, 어떠한 `Array` 의 속성도 없다.
+- 함수의 호출 방법은 네 가지가 있다. (`메소드 호출 패턴`, `함수 호출 패턴`, `생성자 호출 패턴`, `apply 호출 패턴`)
+  - 각 패턴에 따라 `this` 는 다르게 초기화된다.
+
+__메소드 호출 패턴__
+- 메소드란 객체의 속성에 할당된 함수 객체를 뜻한다.
+- 메소드를 호출할 때, `this` 는 메소드를 포함하는 객체에 바인딩된다. (즉, `this` 는 객체 자신이 된다.)
+  - `this` 와 객체의 바인딩은 호출 시에 일어난다.
+- 메소드는 `this` 를 통해 객체의 속성에 접근할 수 있다.
+
+```js
+const obj = {
+  num: 1,
+  addOne: function () {
+    this.num++;
+  },
+};
+
+console.log(obj.num); // 1
+
+obj.addOne();
+
+console.log(obj.num); // 2
+```
+
+__함수 호출 패턴__
+- 함수가 객체의 속성이 아닌 경우에는 함수로써 호출된다.
+- 함수를 이 패턴으로 호출하면, `this` 는 전역객체에 바인딩되는데, 이 특성은 언어 설계 단계에서의 실수이다.
+  - 만약 설계가 제대로 됐다면, 내부 함수를 호출할 때, 이 함수의 `this` 는 외부 함수의 `this` 변수에 바인딩되어야 한다.
+  - 이 요류로 인해, 메소드가 내부 함수를 사용할 때 자신의 작업을 돕지 못한다.
+  - 이런 문제를 해결하기 위한 방법은 `that` 과 같은 변수를 선언하여 사용하는 것이다.
+
+```js
+const obj = {
+  num: 2,
+  double: function () {
+    const that = this;
+
+    const helper = () => {
+      that.num *= 2;
+    };
+
+    helper();
+  },
+};
+
+console.log(obj.num); // 2
+
+obj.double();
+
+console.log(obj.num); // 4
+```
+
+__생성자 호출 패턴__
+- 함수를 `new` 연산자와 함께 사용하면, 호출한 함수의 `prototype` 속성 값에 연결되는 링크를 가진 객체가 생성되며, 이 객체는 `this` 에 바인딩된다.
+- `new` 와 함께 사용되도록 만들어진 함수를 `생성자` 라고 하는데, 이 함수는 명명할 때 파스칼 케이스(PascalCase) 를 사용한다.
+- 생성자를 `new` 없이 사용하면, 컴파일 시간이나 실행시간에 어떠한 경고도 없기 때문에 주의해야 한다.
+  - 함수명으로 파스칼 케이스를 사용함으로써 해당 함수가 생성자임을 표시하고, 이를 사용할 때 항상 `new` 와 함께 사용해야 한다.
+
+```js
+function Person(name) {
+  this.name = name;
+};
+
+Person.prototype.getName = function () {
+  return this.name;
+};
+
+const jaewon = new Person('Jaewon');
+console.log(jaewon.getName());
+```
+
+__apply 호출 패턴__
+- 자바스크립트 함수는 객체이기 때문에 메소드를 가질 수 있다.
+- `apply` 메소드는 함수를 호출할 때 사용할 인자들의 배열을 받으며, `this` 의 값을 사용자가 선택할 수 있게 한다.
+  - `apply` 메소드의 첫 번째 인자는 `this` 에 바인딩될 값이며, 두 번째 인자는 매개변수로 쓰일 값들이 담긴 배열이다.
+
+```js
+function multiply(a, b) {
+  return a * b;
+}
+
+const arr = [42, 5];
+const result = multiply(null, arr);
+
+function Person(name) {
+  this.name = name;
+};
+
+Person.prototype.getName = function () {
+  return this.name;
+};
+
+const jaewon = {
+  name: 'Jaewon',
+};
+
+const name = Person.prototype.getName.apply(jaewon);
+```
+- 위를 보면, `jaewon` 이라는 객체는 `Person.prototype` 을 상속받지 않지만, `getName` 메소드가 `jaewon` 을 대상으로 실행하도록 할 수 있다.
 
