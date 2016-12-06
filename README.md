@@ -12,7 +12,9 @@
 - [HTML5](https://github.com/wonism/TIL/tree/master/front-end/html)
 - [Handlebars](https://github.com/wonism/TIL/tree/master/front-end/handlebars)
 - [Java Script](https://github.com/wonism/TIL/tree/master/front-end/javascript)
+  - [Copy an Object](https://github.com/wonism/TIL/tree/master/front-end/javascript/copy-object.md)
   - [Closure](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
+  - [Java Script's Good parts](https://github.com/wonism/TIL/tree/master/front-end/javascript/good-parts.md)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
