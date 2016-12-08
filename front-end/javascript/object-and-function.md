@@ -1,4 +1,4 @@
-# Java Script - The good parts
+# Java Script's Objects & Functions
 
 <p align="center"><img src="https://github.com/wonism/TIL/blob/master/front-end/javascript/js-the-good-parts.jpg" width="160" height="209" align="center" /></p>
 
@@ -8,8 +8,12 @@
 - 자바스크립트 객체 [(바로 가기)](#자바스크립트-객체)
   - 객체 리터럴 [(바로 가기)](#객체-리터럴)
   - 객체의 복사 [(바로 가기)](#객체의-복사)
+- 프로토타입 [(바로 가기)](#프로토타입)
   - 객체의 리플렉션과 열거 [(바로 가기)](#객체의-리플렉션과-열거)
   - 객체 속성의 삭제 [(바로 가기)](#객체-속성의-삭제)
+- 자바스크립트 함수 [(바로 가기)](#자바스크립트-함수)
+  - 함수 객체 [(바로 가기)](#함수-객체)
+  - 함수의 호출 [(바로 가기)](#함수의-호출)]
 
 ## 자바스크립트 객체
 - 자바스크립트에서 단순한 데이터 타입은 숫자, 스트링, 불리언, undefined 가 있으며, 이들을 제외한 타입은 모두 객체이다.
@@ -59,6 +63,8 @@ if (boughtHouse) {
 - 객체는 참조 방식으로 전달되며, 결코 복사되지 않는다.
 - 아래 링크는 객체를 복사하는 방법에 대한 글이다.
   - [링크](https://github.com/wonism/TIL/tree/master/front-end/javascript/copy-object.md)
+
+[목차로 가기](#목차)
 
 ## 프로토타입
 - 모든 객체는 속성을 상속하는 프로토타입 객체에 연결된다.
@@ -233,6 +239,8 @@ delete person2.name;
 console.log(person2.name); // Jaewon
 ```
 
+[목차로 가기](#목차)
+
 ## 자바스크립트 함수
 - 자바스크립트 함수는 lexical scope (어휘적 범위)를 가지는 일급 객체(first class object) 이다.
   - 일급 객체는 속성 및 메소드를 가질 수 있는 객체이다.
@@ -258,6 +266,8 @@ __함수와 클로저__
 - (객체 리터럴로 생성되는) 일반 객체와 달리 함수는 `Function.prototype` 에 연결된다. (`Function` 은 `Object.prototype` 에 연결된다.)
 - `functionName.prototype` 을 확인해보면 `Object` 가 나오는데, 이 `Object` 에는 `functionName` 함수 자체를 값으로 갖는 `constructor` 속성이 있다.
 - 함수는 객체이므로, 변수나 객체, 배열에 할당할 수 있으며, 다른 함수에 전달되는 인자 혹은 함수의 반환값으로 사용할 수도 있다.
+
+[목차로 가기](#목차)
 
 ### 함수의 호출
 - 함수는 호출되면, `this` 와 `arguments` 라는 매개변수를 받게 된다.
@@ -363,4 +373,6 @@ const jaewon = {
 const name = Person.prototype.getName.apply(jaewon);
 ```
 - 위를 보면, `jaewon` 이라는 객체는 `Person.prototype` 을 상속받지 않지만, `getName` 메소드가 `jaewon` 을 대상으로 실행하도록 할 수 있다.
+
+[목차로 가기](#목차)
 
