@@ -13,7 +13,12 @@
   - 객체 속성의 삭제 [(바로 가기)](#객체-속성의-삭제)
 - 자바스크립트 함수 [(바로 가기)](#자바스크립트-함수)
   - 함수 객체 [(바로 가기)](#함수-객체)
-  - 함수의 호출 [(바로 가기)](#함수의-호출)]
+  - 함수의 호출 [(바로 가기)](#함수의-호출)
+  - arguments 객체 [(바로 가기)](#arguments-객체)
+  - 반환 [(바로 가기)](#반환)
+  - 예외 [(바로 가기)](#예외)
+  - 유효범위 [(바로 가기)](#유효범위)
+  - 클로저 [(바로 가기)](#클로저)
 
 ## 자바스크립트 객체
 - 자바스크립트에서 단순한 데이터 타입은 숫자, 스트링, 불리언, undefined 가 있으며, 이들을 제외한 타입은 모두 객체이다.
@@ -375,4 +380,175 @@ const name = Person.prototype.getName.apply(jaewon);
 - 위를 보면, `jaewon` 이라는 객체는 `Person.prototype` 을 상속받지 않지만, `getName` 메소드가 `jaewon` 을 대상으로 실행하도록 할 수 있다.
 
 [목차로 가기](#목차)
+
+### arguments 객체
+- 함수는 호출되면, `arguments` 라는 전달된 인자들을 담은 객체를 받게된다.
+  - 앞서 말했지만, `Array` 와 비슷하지만, `length` 속성을 제외하곤, 어떠한 `Array` 의 속성도 없는 객체이다.
+- 다음은 `arguments` 의 `length` 프로퍼티를 통해, `n` 개의 인자들을 모두 더해주는 함수이다.
+
+```js
+function sum() {
+  let sum = 0;
+
+  for (let i = 0, len = arguments.length; i < len; i++) {
+    sum += arguments[i];
+  }
+
+  return sum;
+}
+
+const result = sum(1, 2, 3, 4, 5); // 15
+```
+
+[목차로 가기](#목차)
+
+### 반환
+- `return` statement 는 함수 실행을 종료하고, 함수를 호출한 `caller` 에게 되돌려 줄 값을 지정한다. 또한, `return [[expression]];` 이후의 문장들은 실행하지 않는다.
+- `return` 은 생략할 수 있으며, 생략하면 그 함수는 `undefined` 를 반환한다.
+- `return` 은 Automatic Semicolon Insertion 의 영향을 받아, 줄바꿈 문자로 그 뒤에 나오는 표현식을 분리할 수 없다.
+  - 다음은 `return` 키워드와 줄바꿈 문자를 사용할 경우 ASI 로 인해 어떻게 코드가 변하는지를 보여준다.
+
+```js
+/***** Before ASI *****/
+return
+a + b;
+
+/***** After ASI *****/
+return;
+a + b;
+```
+
+- 함수를 `new` 키워드와 함께 실행하고, 반환값이 객체가 아닌 경우, 반환값은 `this` 가 된다.
+
+[목차로 가기](#목차)
+
+### 예외
+- 예외는 정상적인 프로그램 흐름을 방해하는 비정상적인 사고로, 사고가 발생하면, 프로그램은 예외를 발생시킨다.
+
+```js
+function add(a, b) {
+  if (typeof a === 'undefined' || typeof b === 'undefined') {
+    /* Throw error with Error object */
+    throw new Error('2 parameters are required.');
+  } else if (typeof a !== 'number' || typeof b !== 'number') {
+    /* Throw error with customized object */
+    throw {
+      name: 'TypeError',
+      message: '1st and 2nd parameters must be numbers.',
+      stack: (new Error()).stack
+    };
+  }
+
+  return a + b;
+}
+```
+
+- `throw` 는 함수의 실행을 중단하며, `new Error([[message]])` 로 생성된 에러 객체를 반환한다. `Error` 는 `name` 과 `message` 프로퍼티를 가지는데, `Error` 객체 대신 `name` 과 `message` 를 가진 객체를 반환해도 된다.
+
+```js
+function tryAdd() {
+  try {
+    add('7');
+  } catch (e) {
+    if (e.name === 'Error') {
+      console.log(`${ e.name } occured. ${ e.message }`);
+    } else if (e.name === 'TypeError') {
+      console.log(`${ e.name }!! ${ e.message }`);
+    }
+  }
+}
+```
+
+- `try` 문을 사용하면, 예외 객체는 `catch` 절에 전달되며, 예외를 포착하는 catch 블록은 한 개뿐이다. 이를 좀 더 정밀하게 제어하고자할 경우, 에러 객체의 `name` 등을 확인하면 된다.
+
+[목차로 가기](#목차)
+
+### 유효범위
+- 자바스크립트의 유효범위는 C, Java 등과 달리 함수 단위의 유효범위를 가진다.
+  - 즉, 자바스크립트에서 어떤 함수 안에 정의된 변수는 그 함수 바깥에서는 참조하지 못한다.
+  - 아래 C++ 코드는 C++ 이 블록 스코프라는 것을 알 수 있는 코드이며, Java Script 코드는 자바스크립트가 함수 스코프라는 것을 알 수 있는 코드다.
+    - 아래 코드를 Atom 에디터에서 실행하면, `blockscope.cpp:15:21: error: use of undeclared identifier 'b'` 와 같은 에러가 발생한다고 알려준다.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  int a = 0;
+
+  if (true) {
+    int b = 0;
+
+    a = 10;
+    b = 42;
+  }
+
+  cout << "a : " << a << endl;
+  cout << "b : " << b << endl;
+}
+```
+
+```js
+function jsScope() {
+  var a = 0;
+
+  if (true) {
+    var b = 0;
+
+    a = 10;
+    b = 42;
+  }
+
+  console.log(`a : ${ a } b : ${ b }`);
+}
+
+jsScope(); // a : 10 b : 42
+```
+
+- 하지만, ECMA Script 2015 에서 제안된 `let` 키워드와 `const` 키워드를 통해, 자바스크립트에서도 블록 스코프를 사용할 수 있다.
+
+```js
+function jsScope() {
+  let a = 0;
+
+  if (true) {
+    let b = 0;
+
+    a = 10;
+    b = 42;
+  }
+
+  console.log(`a : ${ a } b : ${ b }`);
+}
+
+jsScope(); // Uncaught ReferenceError: b is not defined (...)
+```
+
+- 그리고, 자바스크립트의 유효범위는 중복 변수 선언을 허용한다.
+
+```js
+var a = 10;
+
+function jsScope() {
+  var a = 42;
+
+  console.log(a);
+}
+
+jsScope(); // 42
+```
+
+[목차로 가기](#목차)
+
+### 클로저
+- 클로저에 대한 글은 다음 링크를 참고한다.
+  - [링크](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
+
+[목차로 가기](#목차)
+
+<!--
+### 콜백
+
+[목차로 가기](#목차)
+-->
 
