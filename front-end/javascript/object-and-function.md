@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://github.com/wonism/TIL/blob/master/front-end/javascript/js-the-good-parts.jpg" width="160" height="209" align="center" /></p>
 
-- "자바스크립트 핵심 가이드, 더글라스 크락포드 저 (김명신 역) (O'Reilly / 한빛 미디어). Copyright 2008 HANBIT Media, Inc., 9788979145984." 의 일부와 MDN 를 참고하며 정리한 내용입니다.
+- "자바스크립트 핵심 가이드, 더글라스 크락포드 저 (김명신 역) (O'Reilly / 한빛 미디어). Copyright 2008 HANBIT Media, Inc., 9788979145984." 의 일부와 [MDN](https://developer.mozilla.org), [NHN ent. 의 fe.javascript 저장소 위키](https://github.com/nhnent/fe.javascript/wiki)를 참고하며 정리한 내용입니다.
 
 ## 목차
 - 자바스크립트 객체 [(바로 가기)](#자바스크립트-객체)
@@ -19,6 +19,12 @@
   - 예외 [(바로 가기)](#예외)
   - 유효범위 [(바로 가기)](#유효범위)
   - 클로저 [(바로 가기)](#클로저)
+  - 콜백 [(바로 가기)](#콜백)
+  - 연속 호출 [(바로 가기)](#연속-호출)
+  - 메모이제이션 [(바로 가기)](#메모이제이션)
+<!--
+  - 커링 [(바로 가기)](#커링)
+-->
 
 ## 자바스크립트 객체
 - 자바스크립트에서 단순한 데이터 타입은 숫자, 스트링, 불리언, undefined 가 있으며, 이들을 제외한 타입은 모두 객체이다.
@@ -546,9 +552,114 @@ jsScope(); // 42
 
 [목차로 가기](#목차)
 
-<!--
 ### 콜백
+- 자바스크립트는 싱글 쓰레드 기반의 언어로, 하나의 작업만을 처리할 수 있다.
+- 하지만, Single Page Application 기반의 웹사이트 등을 보면, 여러 HTTP 요청을 처리하는 것을 볼 수 있는데, 이것이 가능한 이유는 바로 콜백이며, 이를 통해 동시성을 지원한다.
+  - 서버로 요청을 할 때 비동기식으로 요청하고, 서버의 응답이 왔을 때 호출되는 콜백 함수를 사용하는 방법을 사용한다.
+- 이 [링크](https://github.com/nhnent/fe.javascript/wiki/June-13-June-17,-2016) 는 자바스크립트와 이벤트 루프에 대한 글로 자바스크립트의 비동기 방식에 대해서 잘 설명되어있다.
+- 콜백을 자주 사용하게 되면, 흔히 알려진 `Callback Hell` 을 경험할 수도 있다. 이를 해결하기 위한 방법으로 `async`, `bluebird`, `q`, `step` 등의 솔루션이 있는데, ECMA Script 2015 에서 제안된 `Promise` 를 사용할 수도 있다.
+  - `Promise` 는 차후 정리할 예정이다.
 
 [목차로 가기](#목차)
+
+### 연속 호출
+- 객체의 상태를 변경하거나 설정하는 메소드 등 일부 메소드에는 반환값이 없다. 이 메소드들이 `undefined` 대신 `this` 를 반환한다면, 연속 호출이 가능해진다.
+- 연속 호출을 사용하면, 같은 객체에 대해 문장 하나로 연속되는 메소드를 여러 개 호출할 수 있다.
+
+```js
+const arr = [3, 4, 1, 5, 2];
+
+arr
+  .sort((a, b) => a > b) // 1, 2, 3, 4, 5
+  .map(a => a * 2) // 2, 4, 6, 8, 10
+  .reduce((a, b) => a + b); // 30
+```
+
+[목차로 가기](#목차)
+
+<!--
+### 커링
+- 책에 있는 내용만으로는 정확한 내용 파악이 힘들어 추후 자료 조사 후,
+  정리할 예정
 -->
+
+### 메모이제이션
+- 함수는 불필요한 작업을 피하기 위해 이전에 연산한 결과를 저장하는 객체를 사용할 수 있으며, 이러한 최적화 기법을 `memoization` 이라고 한다.
+- 만약 피보나치 수열의 `n` 번째 값을 구하는 재귀함수를 여러 번 실행한다면, 함이 함수는 수없이 호출되어야 한다.
+
+```js
+function fibonacci(n) {
+  return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+for (let i = 0; i <= 10; i++) {
+  console.log(`${ i } : ${ fibonacci(i) }`);
+}
+
+// 직접 호출한 횟수 11 번
+// 이미 계산한 값들을 다시 계산하기 위해 호출된 횟수 11 번
+// 총 453 번 호출
+```
+
+- 메모이제이션을 적용하면, 작업량을 줄일 수 있다.
+
+```js
+const fibonacci = function () {
+  const memo = [0, 1];
+
+  function fn(n) {
+    let result = memo[n];
+
+    if (typeof result !== 'number') {
+      result = fn(n - 1) + fn(n - 2);
+      memo[n] = result;
+    }
+
+    return result;
+  };
+
+  return fn;
+}();
+
+for (let i = 0; i <= 10; i++) {
+  console.log(`${ i } : ${ fibonacci(i) }`);
+}
+
+// 직접 호출한 횟수 11번
+// 앞선 메모이제이션 결과를 얻기 위해 호출한 18번
+// 총 29번 호출
+```
+
+- 이런 일련의 작업을 함수로 구현함으로써 재사용할 수 있다.
+
+```js
+function memoizer(memo, fundamental) {
+// memo 는 결과를 저장할 배열, fundamental 은 메모이제이션할 함수이다.
+  function shell(n) {
+  // 함수 shell 은 memo 를 관리하고, 필요한 경우엔 fundamental 함수를 호출한다.
+    let result = memo[n];
+
+    if (typeof result !== 'number') {
+      result = fundamental(shell, n);
+      // 이 때, shell 이 받는 인자는 fundamental 과 함께 전달한다.
+      memo[n] = result;
+    }
+
+    return result;
+  }
+
+  return shell;
+}
+
+
+const fibonacci = memoizer([0, 1], (shell, n) => {
+  return shell(n - 1) + shell(n - 2);
+});
+
+const factorial = memoizer([1, 1], (shell, n) => {
+  return n * shell(n - 1);
+});
+```
+
+[목차로 가기](#목차)
 
