@@ -25,6 +25,10 @@
 <!--
   - 커링 [(바로 가기)](#커링)
 -->
+- 상속 [(바로 가기)](#상속)
+  - 의사 클래스 방식[(바로 가기)](#의사-클래스-방식)
+  - 프로토타입 방식[(바로 가기)](#프로토타입-방식)
+  - 객체를 기술하는 객체[(바로 가기)](#객체를-기술하는-객체)
 
 ## 자바스크립트 객체
 - 자바스크립트에서 단순한 데이터 타입은 숫자, 스트링, 불리언, undefined 가 있으며, 이들을 제외한 타입은 모두 객체이다.
@@ -658,6 +662,163 @@ const fibonacci = memoizer([0, 1], (shell, n) => {
 
 const factorial = memoizer([1, 1], (shell, n) => {
   return n * shell(n - 1);
+});
+```
+
+[목차로 가기](#목차)
+
+## 상속
+
+### 의사 클래스 방식
+- 자바스크립트에서는 함수 객체가 만들어질 때, 아래와 같은 코드가 내부적으로 실행된다.
+  - `prototype` 속성은 상속할 것들이 저장되는 객체이다.
+
+```js
+this.prototype = { constructor: this };
+```
+
+- 함수가 `new` 연산자를 통해 생성자 호출 패턴으로 호출되면, 함수 실행 방법은 내부적으로 아래와 비슷하게 구현될 것이다.
+
+```js
+/* ... */
+// 생성자의 프로토타입을 상속받는 객체
+var that = Object.create(this.prototype);
+
+// this 를 새로운 객체에 바인딩하면서 생성자 호출
+var other = this.apply(that, arguments);
+
+// 반환값이 객체가 아니면 새로운 객체로 대체
+return (typeof other === 'object' && other) || that;
+/* ... */
+```
+
+- 생성자 함수를 정의하고, 이 함수의 `prototype` 을 다른 함수의 `instance` 로 대체하는 방식으로 또 다른 의사 클래스를 만들 수 있다.
+
+```js
+function Car(color) {
+  this.color = color;
+}
+
+Car.prototype.getColor = function () {
+  return this.color;
+};
+
+Car.prototype.honk = function () {
+  return this.hornSound = 'Beep!' || '';
+};
+
+function Bus(color) {
+  this.color = color;
+  this.hornSound = 'Beep Beep';
+}
+
+Bus.prototype = new Car();
+
+Bus.prototype.getIncome(people) {
+  return people * 1000;
+}
+
+Bus.prototype.getColor = function () {
+  return `dark ${ this.color }`;
+};
+
+const bus = new Bus('blue');
+const income = bus.getIncome(100);
+const color = bus.getColor();
+```
+
+- `inherits` 메소드를 정의하여 `Bus.prototype = new Car();` 와 같은 부분을 숨길 수 있다.
+  - `method` 와 `inherits` 메소드는 `this` 를 반환하기 때문에 연속호출로써 더 간단히 표현할 수 있다.
+
+```js
+Function.prototype.method = function (name, func) {
+  this.prototype[name] = func;
+  return this;
+};
+
+Function.method('inherits', function (Parent) {
+  this.prototype = new Parent();
+  return this;
+});
+
+function Car(color) {
+  this.color = color;
+}
+
+Car.prototype.getColor = function () {
+  return this.color;
+};
+
+Car.prototype.honk = function () {
+  return this.hornSound = 'Beep!' || '';
+};
+
+const Bus = function (color) {
+  this.color = color;
+  this.hornSound = 'Beep Beep';
+}.
+  inherits(Car).
+  method('getColor', function () {
+    return `dark ${ this.color }`;
+  }).
+  method('getIncome', function (people) {
+    return people * 1000;
+  });
+
+const bus = new Bus('blue');
+const income = bus.getIncome(100);
+const color = bus.getColor();
+```
+
+- 의사 클래스 방식은 `private` 와 같은 기능이 없으며, 호출 시 `new` 를 빼먹으면 `this` 는 새로운 객체와 바인딩되지 않는다는 문제가 있다.
+  - `this` 는 전역객체와 연결된다.
+
+[목차로 가기](#목차)
+
+### 프로토타입 방식
+- 프로토타입에 기반한 패턴에서는 객체에 초점을 둔다.
+- 먼저 객체를 만든 뒤, `Objedt.create` 메소드를 사용하여 인스턴스를 생성한다.
+
+```js
+const puppy = {
+  name: '',
+  getName: function () {
+    return this.name;
+  },
+  saying: function () {
+    console.log(this.sound || '');
+  },
+};
+
+const myPuppy = Object.create(puppy);
+
+myPuppy.name = 'Cookie';
+myPuppy.sound = 'bow wow';
+myPuppy.getName = function () {
+  return `Kim ${ this.name }`;
+};
+myPuppy.saying = function () {
+  console.log(`${ this.sound }, ${ this.sound }!`);
+};
+```
+
+[목차로 가기](#목차)
+
+### 객체를 기술하는 객체
+- 생성자가 여러 개의 인자를 필요로 하게되면, 인자들의 순서를 외워야하는데, 이를 하나의 객체 인자로 받게되면 보다 편리하다.
+  - 또한, 기본값이 적절하게 설정되어있다면, 객체의 `property` 를 생략해도 된다.
+
+```js
+/* parameters */
+const obj = makeObject(1, 2, 3, 4, 5);
+
+/* a parameter expressed by an object */
+const obj2 = makeObject({
+  third: 3,
+  second: 2,
+  first: 1,
+  fifth: 5,
+  firth: 4,
 });
 ```
 
