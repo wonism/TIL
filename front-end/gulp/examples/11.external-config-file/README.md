@@ -12,13 +12,13 @@ $ touch gulp-config.json & touch gulpfile.js
 ```js
 /***** config/gulp-config.json *****/
 {
-  desktop: {
-    js: 'desktop/js/**/*.js'
-    dist: 'dist/desktop/js'
+  "desktop": {
+    "js": "desktop/js/**/*.js",
+    "dist": "dist/desktop/js"
   },
-  mobile: {
-    js: 'mobile/js/**/*.js',
-    dist: 'dist/mobile/js'
+  "mobile": {
+    "js": "mobile/js/**/*.js",
+    "dist": "dist/mobile/js"
   }
 }
 ```
