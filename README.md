@@ -9,7 +9,7 @@
 - [Webpack](https://github.com/wonism/TIL/tree/master/front-end/webpack)
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries)
   - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/libraries/pdfmake)
-- [HTML5](https://github.com/wonism/TIL/tree/master/front-end/html)
+- [HTML](https://github.com/wonism/TIL/tree/master/front-end/html)
 - [Handlebars](https://github.com/wonism/TIL/tree/master/front-end/handlebars)
 - [Java Script](https://github.com/wonism/TIL/tree/master/front-end/javascript)
   - [Copy an Object](https://github.com/wonism/TIL/tree/master/front-end/javascript/copy-object.md)
