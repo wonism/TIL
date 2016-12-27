@@ -3,21 +3,34 @@
 
 ## Contents
 ### Front-end
-- [Gulp](https://github.com/wonism/TIL/tree/master/front-end/gulp)
+
+__Java Script Libraries & Frameworks__
 - [React JS](https://github.com/wonism/TIL/tree/master/front-end/reactjs)
 - [TypeScript](https://github.com/wonism/TIL/tree/master/front-end/typescript)
-- [Webpack](https://github.com/wonism/TIL/tree/master/front-end/webpack)
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries)
   - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/libraries/pdfmake)
+
+__Tools__
+- [Webpack](https://github.com/wonism/TIL/tree/master/front-end/webpack)
+- [Gulp](https://github.com/wonism/TIL/tree/master/front-end/gulp)
+
+__HTML__
 - [HTML](https://github.com/wonism/TIL/tree/master/front-end/html)
+
+__Template Engines__
 - [Handlebars](https://github.com/wonism/TIL/tree/master/front-end/handlebars)
+
+__Java Script__
 - [Java Script](https://github.com/wonism/TIL/tree/master/front-end/javascript)
   - [Copy an Object](https://github.com/wonism/TIL/tree/master/front-end/javascript/copy-object.md)
   - [Closure](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
   - [Java Script's Objects & Functions](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-and-function.md)
   - [Iterator & Generator](https://github.com/wonism/TIL/tree/master/front-end/javascript/iterator-generator.md)
+  - [Promise](https://github.com/wonism/TIL/tree/master/front-end/javascript/promise.md)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
+
+__ETC__
 - [Deep link for iOS and Android](https://github.com/wonism/TIL/tree/master/front-end/deep-link)
 
 ### Back-end
