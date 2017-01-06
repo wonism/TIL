@@ -2,8 +2,10 @@
 ## 목차
 - 태그 관련 [(바로 가기)](#태그-관련)
   - 모바일 환경에서 상황에 맞는 키보드 띄우기 [(바로 가기)](#모바일-환경에서-상황에-맞는-키보드-띄우기)
+  - 유용한 file 태그의 속성 [(바로 가기)](#유용한-file-태그의-속성)
   - table 태그와 max-width [(바로 가기)](#table-태그와-max-width)
   - Anchor 태그의 mailto 사용하기 [(바로 가기)](#Anchor-태그의-mailto-사용하기)
+  - URL 바 색상 변경하기 [(바로 가기)](#URL-바-색상-변경하기)
 
 ## 태그 관련
 ### 모바일 환경에서 상황에 맞는 키보드 띄우기
@@ -15,6 +17,21 @@ __숫자만 입력 받기__
 __URL 주소 입력 받기__
 ```html
 <input type="url" />
+```
+
+### 유용한 file 태그의 속성
+__카메라 및 갤러리, 오디오에 접근하기__
+```html
+<!-- 카메라 및 갤러리를 선택할 수 있음 -->
+<input type="file" accept="image/*" />
+
+<!-- 선택 팝업을 건너 뛰고, 바로 카메라에 접근하기 -->
+<input type="file" accept="image/*" capture="camera" />
+<!-- capture 속성을 사용한다. -->
+
+<!-- 비디오 또는 오디오에 접근하기 -->
+<input type="file" id = "video" name="video" accept="video/*" capture="camcorder">
+<input type="file" id="audio" name="audio" accept="audio/*" capture="microphone">
 ```
 
 ### table 태그와 max-width
@@ -55,5 +72,17 @@ table {
 
 <!-- 본문 추가하기 -->
 <a href="mailto:MAIL_ADDRESS@DOMAIN.COM?body=CONTENTS">Send mail</a>
+```
+
+### URL 바 색상 변경하기
+```html
+<meta name="theme-color" content="#03D1AA" />
+```
+
+`manifest.json` 을 사용한다면,
+```js
+  ...
+  "theme_color": "#03D1AA",
+  ...
 ```
 

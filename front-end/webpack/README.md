@@ -8,6 +8,7 @@
 - 로더 추가하기 [(바로 가기)](#로더-추가하기)
 - Lint / Hint 사용하기 [(바로 가기)](#lint--hint-사용하기)
 - webpack development server 설정하기 [(바로 가기)](#webpack-development-server-설정하기)
+  - HTTPS 사용하기 [(바로 가기)](#https-사용하기)
 - 템플릿 사용하기 [(바로 가기)](#템플릿-사용하기)
 - (배포용) 정적 자원 버전 관리하기 [(바로 가기)](#배포용-정적-자원-버전-관리하기)
 - jQuery 등 External Library 사용하기 [(바로 가기)](#jquery-등-external-library-사용하기)
@@ -347,6 +348,20 @@ $ webpack-dev-server --hot --host 0.0.0.0
 
 <p>http://localhost:7777/ 에 접속하면, 우리가 작성한 웹 페이지를 볼 수 있다.<br />src 밑에 있는 파일들이 수정될 때마다, webpack 은 이를 감지하고, 페이지를 새로고침하지 않고도 새로 작성된 코드가 브라우저에 반영되는 것을 볼 수 있다.</p>
 
+[목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
+
+### HTTPS 사용하기
+`--https` flag 를 사용한다.
+```sh
+$ webpack-dev-server --https
+```
+또는, `devServer.https` 를 `true` 로 한다.
+```js
+  devServer: {
+    https: true,
+    ...
+  }
+```
 [목차로 가기](https://github.com/wonism/TIL/tree/master/front-end/webpack#목차)
 
 ## 템플릿 사용하기
