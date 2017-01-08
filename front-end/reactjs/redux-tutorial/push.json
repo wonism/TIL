@@ -1,0 +1,15 @@
+{
+  "/": {
+    "/bundle.js": {
+      "type": "javascript",
+      "weight": 1
+    }
+  },
+  "/index.html": {
+    "/bundle.js": {
+      "type": "javascript",
+      "weight": 1
+    }
+  }
+}
+

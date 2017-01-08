@@ -17,6 +17,9 @@ __Basic__
 __Flux__
 - [Flux Tutorial](https://github.com/wonism/TIL/tree/master/front-end/reactjs/flux-tutorial)
 
+__Redux__
+- [Redux Tutorial](https://github.com/wonism/TIL/tree/master/front-end/reactjs/redux-tutorial)
+
 __문제 해결__
 - [Issue with react-facebook-login](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/issue--facebook-login.md)
 - [Issue with react-slick](https://github.com/wonism/TIL/blob/master/front-end/reactjs/etc/issue--react-slick.md)
