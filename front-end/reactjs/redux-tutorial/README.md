@@ -658,5 +658,6 @@ render(
 
 ## 참고
 [http://redux.js.org/](http://redux.js.org/)
+[Egghead : Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
 [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nsl6w3wer)
 
