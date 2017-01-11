@@ -45,6 +45,8 @@ __state의 변경은 순수 함수를 통해 이루어져야 한다__
   - 리듀서는 순수 함수로 이전의 `state` 와 `action` 을 넘겨받으면, 다음의 `state` 값을 반환한다. 이전 `state` 를 변경하는 대신, 새로운 객체를 생성하여 반환한다.
 
 ```js
+import { combineReducers, createStore } from 'redux';
+
 function visibilityFilter(state = 'SHOW_ALL', action) {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
@@ -78,7 +80,6 @@ function todos(state = [], action) {
   }
 }
 
-import { combineReducers, createStore } from 'redux';
 let reducer = combineReducers({ visibilityFilter, todos });
 let store = createStore(reducer);
 ```
@@ -657,7 +658,7 @@ render(
   - 이는 루트 컴퍼넌트를 렌더링할 때, 한 번만 사용해야한다.
 
 ## 참고
-[http://redux.js.org/](http://redux.js.org/)
-[Egghead : Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
-[Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nsl6w3wer)
+- [http://redux.js.org/](http://redux.js.org/)
+- [Egghead : Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+- [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.nsl6w3wer)
 
