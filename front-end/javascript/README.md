@@ -3,5 +3,6 @@
 - [Closure](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
 - [Java Script's The Good Parts](https://github.com/wonism/TIL/tree/master/front-end/javascript/good-parts.md)
 - [Iterator & Generator](https://github.com/wonism/TIL/tree/master/front-end/javascript/iterator-generator.md)
+- [Promise](https://github.com/wonism/TIL/tree/master/front-end/javascript/promise.md)
 - [Block scope in switch-case](https://github.com/wonism/TIL/tree/master/front-end/javascript/block-scope-in-switch.md)
 

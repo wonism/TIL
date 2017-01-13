@@ -34,6 +34,7 @@ __Java Script__
   - [Java Script's Objects & Functions](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-and-function.md)
   - [Iterator & Generator](https://github.com/wonism/TIL/tree/master/front-end/javascript/iterator-generator.md)
   - [Promise](https://github.com/wonism/TIL/tree/master/front-end/javascript/promise.md)
+  - [Block scope in switch](https://github.com/wonism/TIL/blob/master/front-end/javascript/block-scope-in-switch.md)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
