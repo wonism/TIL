@@ -1,5 +1,5 @@
 # Webpack 사용하기
-<p>Java Script 모듈화 시스템을 위한 방법으로 <a href="http://www.commonjs.org/">Common JS</a> 를 사용하거나, <a href="http://requirejs.org">Require JS</a> 의 바탕이 되는 <a href="https://github.com/amdjs/amdjs-api">AMD</a> 를 이용하는 방법이 있었다.</p>
+<p>Java Script 모듈화 시스템을 위한 방법으로 <a href="http://www.commonjs.org/">Common JS</a> 를 사용하거나, <a href="http://requirejs.org">Require JS</a> 의 바탕이 되는 <a href="https://github.com/amdjs/amdjs-api">AMD</a> 를 이용하는 방법이 있다.</p>
 <p><a href="https://webpack.github.io/docs">Webpack</a> 은 두 그룹의 명세를 모두 지원하는 Java Script 모듈화 도구로 로더를 추가할 수도 있고, 컴파일 속도도 빠르다는 장점이 있다.</p>
 
 ## 목차
