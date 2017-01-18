@@ -68,6 +68,7 @@ __ETC__
 
 ### Github
 - [Hosting SPA ON Github Pages](https://github.com/wonism/TIL/tree/master/github/hosting-spa)
+- [Syncing forked repository](https://github.com/wonism/TIL/tree/master/github/sync-forked-repository)
 
 ### Operating System
 - [OS X](https://github.com/wonism/TIL/tree/master/os/osx)
