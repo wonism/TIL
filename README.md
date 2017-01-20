@@ -37,6 +37,7 @@ __Java Script__
   - [Promise](https://github.com/wonism/TIL/tree/master/front-end/javascript/promise.md)
   - [Block scope in switch](https://github.com/wonism/TIL/blob/master/front-end/javascript/block-scope-in-switch.md)
   - [Apply & Bind & Call](https://github.com/wonism/TIL/tree/master/front-end/javascript/apply-bind-call.md)
+  - [context & this](https://github.com/wonism/TIL/tree/master/front-end/javascript/context-and-scope.md)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
