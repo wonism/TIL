@@ -86,6 +86,8 @@ __ETC__
 - [VIM](https://github.com/wonism/TIL/tree/master/vim)
   - [VIM Cheat Sheet](https://github.com/wonism/TIL/tree/master/ide/vim/cheat-sheet.md)
   - [Useful VIM Settings](https://github.com/wonism/TIL/tree/master/ide/vim/settings.md)
+- [Atom](https://github.com/wonism/TIL/tree/master/atom)
+  - [Custom syntax theme](https://github.com/wonism/TIL/tree/master/atom/custom-syntax-theme.md)
 
 ## I will add..
 __Front-end__
