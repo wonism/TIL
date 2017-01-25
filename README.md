@@ -29,23 +29,23 @@ __Template Engines__
 
 __Java Script__
 - [Java Script](https://github.com/wonism/TIL/tree/master/front-end/javascript)
-  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-and-function.md)
-  - [Copy an Object](https://github.com/wonism/TIL/tree/master/front-end/javascript/copy-object.md)
-  - [Closure](https://github.com/wonism/TIL/tree/master/front-end/javascript/closure.md)
-  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-and-function.md)
-  - [Iterator & Generator](https://github.com/wonism/TIL/tree/master/front-end/javascript/iterator-generator.md)
-  - [Promise](https://github.com/wonism/TIL/tree/master/front-end/javascript/promise.md)
+  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
+  - [Copy an Object](https://github.com/wonism/TIL/blob/master/front-end/javascript/copy-object.md)
+  - [Closure](https://github.com/wonism/TIL/blob/master/front-end/javascript/closure.md)
+  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
+  - [Iterator & Generator](https://github.com/wonism/TIL/blob/master/front-end/javascript/iterator-generator.md)
+  - [Promise](https://github.com/wonism/TIL/blob/master/front-end/javascript/promise.md)
   - [Block scope in switch](https://github.com/wonism/TIL/blob/master/front-end/javascript/block-scope-in-switch.md)
-  - [Apply & Bind & Call](https://github.com/wonism/TIL/tree/master/front-end/javascript/apply-bind-call.md)
-  - [context & this](https://github.com/wonism/TIL/tree/master/front-end/javascript/context-and-scope.md)
+  - [Apply & Bind & Call](https://github.com/wonism/TIL/blob/master/front-end/javascript/apply-bind-call.md)
+  - [context & this](https://github.com/wonism/TIL/blob/master/front-end/javascript/context-and-scope.md)
 - [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
 __Browser__
-- [Reflow & Repaint](https://github.com/wonism/TIL/tree/blob/master/front-end/browser/reflow-repaint.md)
+- [Reflow & Repaint](https://github.com/wonism/TIL/blob/master/front-end/browser/reflow-repaint.md)
 
 __Package Manager__
-- [yarn](https://github.com/wonism/TIL/tree/master/front-end/package-manager/yarn.md)
+- [yarn](https://github.com/wonism/TIL/blob/master/front-end/package-manager/yarn.md)
 
 __ETC__
 - [Deep link for iOS and Android](https://github.com/wonism/TIL/tree/master/front-end/deep-link)
@@ -84,10 +84,10 @@ __ETC__
 
 ### IDE
 - [VIM](https://github.com/wonism/TIL/tree/master/vim)
-  - [VIM Cheat Sheet](https://github.com/wonism/TIL/tree/master/ide/vim/cheat-sheet.md)
-  - [Useful VIM Settings](https://github.com/wonism/TIL/tree/master/ide/vim/settings.md)
+  - [VIM Cheat Sheet](https://github.com/wonism/TIL/blob/master/ide/vim/cheat-sheet.md)
+  - [Useful VIM Settings](https://github.com/wonism/TIL/blob/master/ide/vim/settings.md)
 - [Atom](https://github.com/wonism/TIL/tree/master/atom)
-  - [Custom syntax theme](https://github.com/wonism/TIL/tree/master/atom/custom-syntax-theme.md)
+  - [Custom syntax theme](https://github.com/wonism/TIL/blob/master/atom/custom-syntax-theme.md)
 
 ## I will add..
 __Front-end__
