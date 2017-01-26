@@ -99,9 +99,30 @@ document.body.appendChild(frag);
 11. 캐쉬를 활용한 Reflow 최소화.
   - 브라우저는 레이아웃 변경을 큐에 저장했다가 한 번에 실행함으로써 리플로우를 최소화하는데, offset, scrollTop 과 같은 계산된 스타일 정보를 요청할 때마다 정확한 정보를 제공하기 위해 큐를 비우고, 모든 변경을 다시 적용한다.
   - 이를 최소화하기 위해 수치에 대한 스타일 정보를 변수에 저장하여 정보 요청 횟수를 줄임으로써 리플로우를 최소화한다.
+```js
+for (let i = 0; i < len; i++) {
+  el.style.top = `${ el.offsetTop + 10 }px`;
+  el.style.left = `${ el.offsetLeft + 10 }px`;
+}
+// Bad practice
+
+let top = el.offsetTop, left = el.offsetLeft, elStyle = el.style;
+
+for (let i = 0; i < len; i++) {
+  top += 10;
+  left += 10;
+  elStyle.top = `${ top }px`;
+  elStyle.left = `${ left }px`;
+}
+// Good practice
+```
 
 12. 브라우저 도구로 리페인트 이슈 분석하기
   - 모든 주류 브라우저는 리플로우가 성능에 미치는 영향을 보여주는 [타임라인] 도구를 제공한다.
+    - `IE` 의 경우에는 `dynaTrace AJAX Edition`, `Webkit Browser` 의 경우에는 `Google Chrome SpeedTracer` 가 있다.
+```
+브라우저 도구 사용 방법 추가 예정
+```
 
 ## 참고
 - [Stubbornella : REFLOWS & REPAINTS: CSS PERFORMANCE MAKING YOUR JAVASCRIPT SLOW?](http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/)
