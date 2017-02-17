@@ -9,6 +9,8 @@
 - [Cloud](#cloud)
 - [IDE](#ide)
 
+<hr />
+
 ### Front-end
 
 __Java Script Libraries & Frameworks__
@@ -38,7 +40,7 @@ __Java Script__
   - [Block scope in switch](https://github.com/wonism/TIL/blob/master/front-end/javascript/block-scope-in-switch.md)
   - [Apply & Bind & Call](https://github.com/wonism/TIL/blob/master/front-end/javascript/apply-bind-call.md)
   - [context & this](https://github.com/wonism/TIL/blob/master/front-end/javascript/context-and-scope.md)
-- [Java Script Patters](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
+- [Java Script Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
 __Browser__
@@ -49,6 +51,8 @@ __Package Manager__
 
 __ETC__
 - [Deep link for iOS and Android](https://github.com/wonism/TIL/tree/master/front-end/deep-link)
+
+<hr />
 
 ### Back-end
 - [Node.JS](https://github.com/wonism/TIL/tree/master/back-end/nodejs)
@@ -67,20 +71,30 @@ __ETC__
 - [React Router 사용하기](https://github.com/wonism/TIL/tree/master/back-end/react-router)
 - [GraphQL](https://github.com/wonism/TIL/tree/master/back-end/graph-ql)
 
+<hr />
+
 ### Github
 - [Hosting SPA ON Github Pages](https://github.com/wonism/TIL/tree/master/github/hosting-spa)
 - [Syncing forked repository](https://github.com/wonism/TIL/tree/master/github/sync-forked-repository)
+- ["Something went wrong" message](https://github.com/wonism/TIL/tree/master/github/something-went-wrong)
+
+<hr />
 
 ### Operating System
 - [OS X](https://github.com/wonism/TIL/tree/master/os/osx)
   - [Copy & Paste the contents in command lines](https://github.com/wonism/TIL/tree/master/os/osx/pbcopy)
   - [Compress Files in CLI](https://github.com/wonism/TIL/tree/master/os/osx/compress-files)
+  - [Fine volume control](https://github.com/wonism/TIL/tree/master/os/osx/control-volume)
 - [Linux](https://github.com/wonism/TIL/tree/master/os/linux)
   - [Show top commands in CLI](https://github.com/wonism/TIL/tree/master/os/linux/top-commands)
+
+<hr />
 
 ### Cloud
 - [AWS](https://github.com/wonism/TIL/tree/master/cloud/aws)
   - [Node JS in Elastic Beanstalk : My experience](https://github.com/wonism/TIL/tree/master/cloud/aws/node-js)
+
+<hr />
 
 ### IDE
 - [VIM](https://github.com/wonism/TIL/tree/master/vim)
@@ -88,6 +102,10 @@ __ETC__
   - [Useful VIM Settings](https://github.com/wonism/TIL/blob/master/ide/vim/settings.md)
 - [Atom](https://github.com/wonism/TIL/tree/master/atom)
   - [Custom syntax theme](https://github.com/wonism/TIL/blob/master/atom/custom-syntax-theme.md)
+
+<hr />
+<hr />
+<hr />
 
 ## I will add..
 __Front-end__
@@ -104,6 +122,10 @@ __Operating System__
 
 __HTTP__
 
+
+<hr />
+<hr />
+<hr />
 
 ## I want to learn..
 __Front-end__
