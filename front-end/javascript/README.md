@@ -8,4 +8,5 @@
 - [Block scope in switch-case](https://github.com/wonism/TIL/tree/master/front-end/javascript/block-scope-in-switch.md)
 - [Apply & Bind & Call](https://github.com/wonism/TIL/tree/master/front-end/javascript/apply-bind-call.md)
 - [context & this](https://github.com/wonism/TIL/tree/master/front-end/javascript/context-and-scope.md)
+- [Client-side Storage](https://github.com/wonism/TIL/tree/master/front-end/javascript/client-storage.md)
 

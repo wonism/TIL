@@ -1,5 +1,3 @@
-- [Client-side Storage](https://github.com/wonism/TIL/tree/master/front-end/javascript/client-storage.md)
-
 # 클라이언트 측 저장공간
 > 데이터를 브라우저에 저장함으로써 빠른 속도로 네트워크 독립적인 데이터에 접근할 수 있다.
 
