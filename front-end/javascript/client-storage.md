@@ -11,16 +11,16 @@
 ## Cookies
 - 쿠키는 Lou Montulli 가 고안했으며, 간단한 문자열 데이터를 저장할 수 있다. 주로, 계정의 세션 관리나 사용자 정보 추적과 같은 작업에 사용된다. 또한, 클라이언트 측에만 데이터를 저장할 때 사용한다.
 
-__쿠키의 장점__
-1. 서버와의 통신에 사용할 수 있다.
-2. 쿠키를 수동으로 삭제하지 않고, 자동으로 만료되도록 설정할 수 있다.
+### 쿠키의 장점
+- 서버와의 통신에 사용할 수 있다.
+- 쿠키를 수동으로 삭제하지 않고, 자동으로 만료되도록 설정할 수 있다.
 
-__쿠키의 단점__
-1. 작은 데이터만 저장할 수 있다.
-2. 문자열만 저장 가능하다.
-3. 보안에 취약하다.
+### 쿠키의 단점
+- 작은 데이터만 저장할 수 있다.
+- 문자열만 저장 가능하다.
+- 보안에 취약하다.
 
-__쿠키의 CRUD__
+### 쿠키의 CRUD
 - Create
 ```js
 document.cookie = 'userName=Jaewon;';
@@ -76,14 +76,14 @@ function removeCookie(cname) {
 ## Local Storage
 - 로컬 저장소는 브라우저에서 `key - value` 쌍의 데이터를 저장하기 위한 API 이다. 기술적으로는 문자열만 저장할 수 있지만, `JSON.stringify()` 를 통해 복잡한 데이터를 저장할 수 있다.
 
-__로컬 저장소의 장점__
-1. API 를 통해 데이터를 CRUD 하는 것이 쉽다.
-2. 쿠키보다 많은 데이터를 저장할 수 있으며, 보안에 더 좋다.
+### 로컬 저장소의 장점
+- API 를 통해 데이터를 CRUD 하는 것이 쉽다.
+- 쿠키보다 많은 데이터를 저장할 수 있으며, 보안에 더 좋다.
 
-__로컬 저장소의 단점__
-1. 문자열만 저장 가능하다. (하지만, `JSON.stringify()` 등의 방법으로 어느정도 해결할 수 있다.)
+### 로컬 저장소의 단점
+- 문자열만 저장 가능하다. (하지만, `JSON.stringify()` 등의 방법으로 어느정도 해결할 수 있다.)
 
-__로컬 저장소의 CRUD__
+### 로컬 저장소의 CRUD
 - Create
 ```js
 const user = { name: 'Jaewon', age: 28, };
@@ -113,13 +113,13 @@ localStorage.removeItem('user');
 ## Session Storage
 - 세션 저장소는 로컬 저장소와 비슷하지만, 데이터가 브라우저의 탭 세션용으로 저장된다는 차이가 있다. 사용자가 탭을 닫으면 데이터가 지워진다.
 
-__세션 저장소의 장점__
+### 세션 저장소의 장점
 - 로컬 저장소와 동일하다.
 
-__세션 저장소의 단점__
+### 세션 저장소의 단점
 - 로컬 저장소와 동일하다.
 
-__세션 저장소의 CRUD__
+### 세션 저장소의 CRUD
 - Create
 ```js
 const user = { name: 'Jaewon', age: 28, };
@@ -150,13 +150,13 @@ sessionStorage.removeItem('user');
 - IndexedDB 는 브라우저에 많은 양의 구조화된 데이터를 영구적으로 저장할 수 있으며, 네트워크 상태에 상관없이 여러 기능을 사용할 수 있다.
 - (IndexedDB 를 사용하다보면 IDBRequest 로 인해 사용하기 불편한데, Promise 로 구현된 https://www.npmjs.com/package/idb 패키지를 사용하면, 훨씬 쉽게 사용할 수 있다.)
 
-__IndexedDB 의 장점__
-1. 복잡하고 구조화된 데이터를 처리할 수 있다.
+### IndexedDB 의 장점
+- 복잡하고 구조화된 데이터를 처리할 수 있다.
 
-__IndexedDB 의 단점__
-2. 사용하기가 복잡하다.
+### IndexedDB 의 단점
+- 사용하기가 복잡하다.
 
-__Pre-work__
+### Pre-work
 - Creating or updating the version of the database
   - 데이터에 액세스하기 위해서는 먼저 데이터베이스를 열어야 한다.
   - `onupgradeneeded` 는 데이터베이스의 구조를 변경할 수 있는 유일한 곳이다.
@@ -209,7 +209,7 @@ request.onupgradeneeded = function (event) {
 // window.indexedDB.deleteDatabase('TestIDB');
 ```
 
-__IndexedDB 의 CRUD__
+### IndexedDB 의 CRUD
 - Create (or Update)
 ```js
 const otherCustomerData = [
