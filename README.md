@@ -71,6 +71,8 @@ __ETC__
   - [Django](https://github.com/wonism/TIL/tree/master/back-end/python/django)
 - [React Router 사용하기](https://github.com/wonism/TIL/tree/master/back-end/react-router)
 - [GraphQL](https://github.com/wonism/TIL/tree/master/back-end/graph-ql)
+- [ETC](https://github.com/wonism/TIL/tree/master/back-end/etc)
+  - [Verify SSL certificate expiration date](https://github.com/wonism/TIL/blob/master/back-end/etc/verify-ssl-exdate.md)
 
 <hr />
 
