@@ -49,6 +49,7 @@ __Java Script__
 
 __Browser__
 - [Reflow & Repaint](https://github.com/wonism/TIL/blob/master/front-end/browser/reflow-repaint.md)
+- [Critical Rendering Path](https://github.com/wonism/TIL/blob/master/front-end/browser/critical-rendering-path.md)
 
 __Package Manager__
 - [yarn](https://github.com/wonism/TIL/blob/master/front-end/package-manager/yarn.md)
