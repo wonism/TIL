@@ -30,7 +30,7 @@ $ npm i -S vid-streamer
 ```
 
 - 본인은 Express JS 를 사용하고 있는데, server.js 파일을 다음과 같이 설정한다.
-  - `vidStreamer`의 `settings`메소드에 `config.videos`를 인자로 하여 호출한 뒤, `vidStreamer`를 `app.use`의 인자로 넘긴다.
+  - `vidStreamer`의 `settings`메소드에 `config.videos`를 인자로 하여 호출한 뒤, 이를 `app.use`의 인자로 넘긴다.
 
 ```js
 // Import modules
@@ -43,12 +43,8 @@ import config from '../config/config.json';
 
 const app = express();
 
-// Setting for vidStreamer
-vidStreamer.settings(config.videos);
-
 // Routes
-app.use('/', routes);
-app.use('/videos', vidStreamer);
+app.use('/videos', vidStreamer.settings(config.videos));
 /* ... */
 ```
 
