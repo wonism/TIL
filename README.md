@@ -67,6 +67,7 @@ __ETC__
   - [Use sequelize and sequelize-cli to use MySQL](https://github.com/wonism/TIL/tree/master/back-end/nodejs/sequelize-cli-example)
   - [Use HTTPS at localhost](https://github.com/wonism/TIL/tree/master/back-end/nodejs/https-localhost)
   - [Internationalization with i18n](https://github.com/wonism/TIL/tree/master/back-end/nodejs/i18n)
+  - [Streaming server with Node.js](https://github.com/wonism/TIL/tree/master/back-end/nodejs/streaming-server)
 - [Nginx](https://github.com/wonism/TIL/tree/master/back-end/nginx)
   - [Use HTTPS with Let's Encrypt](https://github.com/wonism/TIL/tree/master/back-end/nginx/lets-encrypt-example)
   - [Update Nginx in Ubuntu 14.04](https://github.com/wonism/TIL/tree/master/back-end/nginx/update-nginx)
