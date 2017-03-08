@@ -85,6 +85,7 @@ __ETC__
 - [Hosting SPA ON Github Pages](https://github.com/wonism/TIL/tree/master/github/hosting-spa)
 - [Syncing forked repository](https://github.com/wonism/TIL/tree/master/github/sync-forked-repository)
 - ["Something went wrong" message](https://github.com/wonism/TIL/tree/master/github/something-went-wrong)
+- [Github command auto completion](https://github.com/wonism/TIL/tree/master/github/git-command-completion)
 
 <hr />
 
