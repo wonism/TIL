@@ -562,7 +562,7 @@ jsScope(); // 42
   - 서버로 요청을 할 때 비동기식으로 요청하고, 서버의 응답이 왔을 때 호출되는 콜백 함수를 사용하는 방법을 사용한다.
 - 이 [링크](https://github.com/nhnent/fe.javascript/wiki/June-13-June-17,-2016) 는 자바스크립트와 이벤트 루프에 대한 글로 자바스크립트의 비동기 방식에 대해서 잘 설명되어있다.
 - 콜백을 자주 사용하게 되면, 흔히 알려진 `Callback Hell` 을 경험할 수도 있다. 이를 해결하기 위한 방법으로 `async`, `bluebird`, `q`, `step` 등의 솔루션이 있는데, ECMA Script 2015 에서 제안된 `Promise` 를 사용할 수도 있다.
-  - `Promise` 는 차후 정리할 예정이다.
+  - [Promise](https://github.com/wonism/TIL/blob/master/front-end/javascript/promise.md)
 
 [목차로 가기](#목차)
 
@@ -714,7 +714,7 @@ function Bus(color) {
 
 Bus.prototype = new Car();
 
-Bus.prototype.getIncome(people) {
+Bus.prototype.getIncome = function (people) {
   return people * 1000;
 }
 
