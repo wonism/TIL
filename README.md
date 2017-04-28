@@ -45,6 +45,7 @@ __Java Script__
   - [context & this](https://github.com/wonism/TIL/blob/master/front-end/javascript/context-and-scope.md)
   - [Client-side Storage](https://github.com/wonism/TIL/tree/master/front-end/javascript/client-storage.md)
   - [Temporal Dead Zone :Are let/const variables hoisted?](https://github.com/wonism/TIL/tree/master/front-end/javascript/tdz.md)
+  - [Prototype](https://github.com/wonism/TIL/tree/master/front-end/javascript/prototype.md)
 - [Java Script Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
 - [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
