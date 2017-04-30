@@ -13,7 +13,7 @@
 
 ### Front-end
 
-__Java Script Libraries & Frameworks__
+__JavaScript Libraries & Frameworks__
 - [React JS](https://github.com/wonism/TIL/tree/master/front-end/reactjs)
 - [TypeScript](https://github.com/wonism/TIL/tree/master/front-end/typescript)
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries)
@@ -32,12 +32,12 @@ __Template Engines__
 __CSS__
 - [nth-child vs nth-of-type](https://github.com/wonism/TIL/tree/master/front-end/css/nth-child-nth-of-type.md)
 
-__Java Script__
-- [Java Script](https://github.com/wonism/TIL/tree/master/front-end/javascript)
-  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
+__JavaScript__
+- [JavaScript](https://github.com/wonism/TIL/tree/master/front-end/javascript)
+  - [JavaScript's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
   - [Copy an Object](https://github.com/wonism/TIL/blob/master/front-end/javascript/copy-object.md)
   - [Closure](https://github.com/wonism/TIL/blob/master/front-end/javascript/closure.md)
-  - [Java Script's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
+  - [JavaScript's Objects & Functions](https://github.com/wonism/TIL/blob/master/front-end/javascript/object-and-function.md)
   - [Iterator & Generator](https://github.com/wonism/TIL/blob/master/front-end/javascript/iterator-generator.md)
   - [Promise](https://github.com/wonism/TIL/blob/master/front-end/javascript/promise.md)
   - [Block scope in switch](https://github.com/wonism/TIL/blob/master/front-end/javascript/block-scope-in-switch.md)
@@ -46,8 +46,9 @@ __Java Script__
   - [Client-side Storage](https://github.com/wonism/TIL/tree/master/front-end/javascript/client-storage.md)
   - [Temporal Dead Zone :Are let/const variables hoisted?](https://github.com/wonism/TIL/tree/master/front-end/javascript/tdz.md)
   - [Prototype](https://github.com/wonism/TIL/tree/master/front-end/javascript/prototype.md)
-- [Java Script Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
-- [Java Script Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
+  - [Private in JS](https://github.com/wonism/TIL/tree/master/front-end/javascript/private.md)
+- [JavaScript Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern)
+- [JavaScript Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips)
 
 __Browser__
 - [Reflow & Repaint](https://github.com/wonism/TIL/blob/master/front-end/browser/reflow-repaint.md)

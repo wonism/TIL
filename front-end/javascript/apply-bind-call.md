@@ -43,11 +43,11 @@ __Bind__
   - 함수 안에서 `this` 는 해당 함수를 호출한 객체이다.
 
 ```js
-const num = 42;
 const obj = { num: 5, };
+this.num = 42;
 
 function power() {
-  return num ** 2;
+  return this.num ** 2;
 }
 
 power(); // 1764
@@ -82,8 +82,7 @@ if (!Function.prototype.bind) {
     if (typeof this !== 'function') {
       // closest thing possible to the ECMAScript 5
       // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to
-be bound is not callable');
+      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
     }
 
     var aArgs   = Array.prototype.slice.call(arguments, 1),
@@ -104,6 +103,7 @@ be bound is not callable');
 
     return fBound;
   };
+}
 ```
 
 ## 참고

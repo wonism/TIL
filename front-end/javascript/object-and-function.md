@@ -1,4 +1,4 @@
-# Java Script's Objects & Functions
+# JavaScript's Objects & Functions
 
 <p align="center"><img src="https://github.com/wonism/TIL/blob/master/front-end/javascript/js-the-good-parts.jpg" width="160" height="209" align="center" /></p>
 
@@ -476,7 +476,7 @@ function tryAdd() {
 ### 유효범위
 - 자바스크립트의 유효범위는 C, Java 등과 달리 함수 단위의 유효범위를 가진다.
   - 즉, 자바스크립트에서 어떤 함수 안에 정의된 변수는 그 함수 바깥에서는 참조하지 못한다.
-  - 아래 C++ 코드는 C++ 이 블록 스코프라는 것을 알 수 있는 코드이며, Java Script 코드는 자바스크립트가 함수 스코프라는 것을 알 수 있는 코드다.
+  - 아래 C++ 코드는 C++ 이 블록 스코프라는 것을 알 수 있는 코드이며, JavaScript 코드는 자바스크립트가 함수 스코프라는 것을 알 수 있는 코드다.
     - 아래 코드를 Atom 에디터에서 실행하면, `blockscope.cpp:15:21: error: use of undeclared identifier 'b'` 와 같은 에러가 발생한다고 알려준다.
 
 ```cpp

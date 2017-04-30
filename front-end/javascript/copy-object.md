@@ -1,4 +1,4 @@
-# Java Script 에서 Object 복사하기
+# JavaScript 에서 Object 복사하기
 
 ## Object 복사하기
 <p>다음과 같은 방식으로 Object 를 복사하면, 객체를 참조하는 복사가 된다.</p>

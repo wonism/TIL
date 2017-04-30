@@ -1,4 +1,4 @@
-# Java Script Promise
+# JavaScript Promise
 > Promise 는 ECMA Script 2015 스펙에 정의됐으며, 비동기 연산을 위해 사용된다. `아직은 아니지만 나중에 완료될 것으로 기대되는 연산`을 표현한다.
 
 ## 배경
