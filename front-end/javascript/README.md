@@ -12,4 +12,5 @@
 - [Temporal Dead Zone :Are let/const variables hoisted?](https://github.com/wonism/TIL/tree/master/front-end/javascript/tdz.md)
 - [Prototype](https://github.com/wonism/TIL/tree/master/front-end/javascript/prototype.md)
 - [Private in JS](https://github.com/wonism/TIL/tree/master/front-end/javascript/private.md)
+- [Bind method implementation](https://github.com/wonism/TIL/tree/master/front-end/javascript/bind-implementation.md)
 
