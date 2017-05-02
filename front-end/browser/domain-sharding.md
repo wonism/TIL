@@ -7,23 +7,22 @@
 
 추가로, 많은 모바일 브라우저가 HTTP 파이프라이닝을 구현하고 있다. 따라서, 도메인 샤딩은 더 이상 동시 요청에 대한 좋은 솔루션이 아니다.
 
-표1
-|Browser        |Request|
-|:--------------|:-----:|
-|Firefox 2      |2      |
-|Firefox 3+     |6      |
-|Opera 9.26     |4      |
-|Opera 12       |6      |
-|Safari 3       |4      |
-|Sarafi 5       |6      |
-|IE 7           |2      |
-|IE 8           |6      |
-|IE 10          |8      |
-|Chrome         |6      |
-|Safari Mobile  |6      |
-|Android Browser|4      |
-|Chrome Mobile  |6      |
-|Firefox Mobile |4      |
+| Browser         | Request |
+|:----------------|:-------:|
+| Firefox 2       | 2       |
+| Firefox 3+      | 6       |
+| Opera 9.26      | 4       |
+| Opera 12        | 6       |
+| Safari 3        | 4       |
+| Sarafi 5        | 6       |
+| IE 7            | 2       |
+| IE 8            | 6       |
+| IE 10           | 8       |
+| Chrome          | 6       |
+| Safari Mobile   | 6       |
+| Android Browser | 4       |
+| Chrome Mobile   | 6       |
+| Firefox Mobile  | 4       |
 
 ## 참조
 - [MDN : HTTP/1.x의 커넥션 관리](https://developer.mozilla.org/ko/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
