@@ -14,4 +14,5 @@
 - [Private in JS](https://github.com/wonism/TIL/tree/master/front-end/javascript/private.md)
 - [Bind method implementation](https://github.com/wonism/TIL/tree/master/front-end/javascript/bind-implementation.md)
 - [module.exports vs exports](https://github.com/wonism/TIL/tree/master/front-end/javascript/module-exports-and-exports.md)
+- [JavaScript Event](https://github.com/wonism/TIL/tree/master/front-end/javascript/event.md)
 
