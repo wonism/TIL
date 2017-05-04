@@ -15,4 +15,5 @@
 - [Bind method implementation](https://github.com/wonism/TIL/tree/master/front-end/javascript/bind-implementation.md)
 - [module.exports vs exports](https://github.com/wonism/TIL/tree/master/front-end/javascript/module-exports-and-exports.md)
 - [JavaScript Event](https://github.com/wonism/TIL/tree/master/front-end/javascript/event.md)
+- [Scope chaining](https://github.com/wonism/TIL/tree/master/front-end/javascript/scope-chaining.md)
 
