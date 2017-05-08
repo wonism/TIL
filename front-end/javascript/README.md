@@ -17,4 +17,5 @@
 - [JavaScript Event](https://github.com/wonism/TIL/tree/master/front-end/javascript/event.md)
 - [Scope chaining](https://github.com/wonism/TIL/tree/master/front-end/javascript/scope-chaining.md)
 - [Arrow function](https://github.com/wonism/TIL/tree/master/front-end/javascript/arrow-functions.md)
+- [Object.create](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-create.md)
 
