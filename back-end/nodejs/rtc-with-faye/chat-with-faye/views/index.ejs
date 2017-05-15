@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <main>
+    <h3>Messages</h3>
+    <ul id="messages-history">
+    </ul>
+    <form id="message-form">
+      <input id="id" type="hidden" value="<%= Date.now().toString().substr(9) %>" />
+      <input id="new-message" type="text" placeholder="Messages..." />
+      <input id="send-message" type="submit" value="Send" />
+    </form>
+  </main>
+  <script type="text/javascript" src="/javascripts/faye-browser-min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Create the Faye client.
+      var client = new Faye.Client('/faye');
+
+      $('body').on('click', '#send-message', function (e) {
+        e.preventDefault();
+
+        var $newMessage = $('#new-message');
+
+        // Publish new message to channel (/messages)
+        client.publish("/messages", {
+          id: $('#id').val(),
+          text: $newMessage.val(),
+        })
+
+        $newMessage.val(null);
+      });
+
+      // Setup the client to subscribe the channel (/messages)
+      client.subscribe('/messages', function (newMessage) {
+        $('#messages-history').append('<li>' + newMessage.id + ' says : ' + newMessage.text + '</li>')
+      });
+    });
+  </script>
+</body>
+</html>
+
