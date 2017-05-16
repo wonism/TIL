@@ -53,6 +53,7 @@ __JavaScript__
   - [Scope chaining](https://github.com/wonism/TIL/tree/master/front-end/javascript/scope-chaining.md)
   - [Arrow function](https://github.com/wonism/TIL/tree/master/front-end/javascript/arrow-functions.md)
   - [Object.create](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-create.md)
+  - [Symbol](https://github.com/wonism/TIL/tree/master/front-end/javascript/symbol.md)
 - [JavaScript Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern/README.md)
 - [JavaScript Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips/README.md)
 
