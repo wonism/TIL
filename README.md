@@ -18,6 +18,7 @@ __JavaScript Libraries & Frameworks__
 - [TypeScript](https://github.com/wonism/TIL/tree/master/front-end/typescript/README.md)
 - [Front-end Libraries](https://github.com/wonism/TIL/tree/master/front-end/libraries/README.md)
   - [pdfmake](https://github.com/wonism/TIL/tree/master/front-end/libraries/pdfmake.md)
+  - [D3](https://github.com/wonism/TIL/tree/master/front-end/libraries/d3)
 
 __Tools__
 - [Webpack](https://github.com/wonism/TIL/tree/master/front-end/webpack/README.md)
