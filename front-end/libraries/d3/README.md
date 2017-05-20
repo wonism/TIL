@@ -98,8 +98,8 @@ bar.append('text') // <g> 안에 <text>를 추가한다.
 ```
 
 ## 참고한 사이트
-https://d3js.org/
-https://bost.ocks.org/
+- https://d3js.org/
+- https://bost.ocks.org/
 
 <!--
 ## 나중에 참고할 사이트

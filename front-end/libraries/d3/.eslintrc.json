@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb-base",
+  "installedESLint": true,
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "always",
+      "imports": "never",
+      "exports": "never",
+      "functions": "ignore"
+    }],
+    "template-curly-spacing": ["error", "always"]
+  }
+}
+
