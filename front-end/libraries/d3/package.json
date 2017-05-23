@@ -3,6 +3,7 @@
     "basic": "ENTRY=basic webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0",
     "svg-basic": "ENTRY=svg-basic webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0",
     "svg-bar-chart": "ENTRY=svg-bar-chart webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0",
+    "responsive-chart": "ENTRY=responsive-chart webpack-dev-server --config webpack.config.js --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

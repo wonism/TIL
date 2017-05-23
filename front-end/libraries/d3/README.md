@@ -7,6 +7,23 @@
 ## 설치
 ```sh
 $ bower install d3
+$ npm i d3
+```
+
+```html
+<!-- add d3.js in your html -->
+<script type="text/javascript" src="PATH/TO/d3.js"></script>
+
+<!-- if you use AMD or CommonJS -->
+<script>
+  require(["PATH/TO/d3"], function (d3) {
+    // Do something..
+  });
+
+  /* or */
+
+  var d3 = require("d3");
+</script>
 ```
 
 ## 사용방법
@@ -111,6 +128,10 @@ __domain, range__
 - `domain`은 입력 가능한 데이터 값의 범위이다.
 - `range`는 출력 가능한 값들의 범위로 범위는 정보 설계자에게 달려있다.
 - 예를 들어, 입력 도메인이 `100, 500`이고 출력 범위가 `10, 350`이면, 데이터 100은 10을 반환하고, 500은 350을, 300은 180을 반환한다.
+
+## 예제
+- [막대 차트](https://github.com/wonism/TIL/tree/master/front-end/libraries/d3/svg-bar-chart)
+- [반응형 차트](https://github.com/wonism/TIL/tree/master/front-end/libraries/d3/responsive-chart)
 
 ## 참고한 사이트
 - https://d3js.org/
