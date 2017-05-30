@@ -26,6 +26,7 @@ config/
 # not completed...
 cs/
 cpp/
+neural-network/
 
 dump.rdb
 nohup.out
