@@ -3,44 +3,12 @@
 
 ## 들어가기 전에
 ### Reactive Programming
-이벤트 버스 또는 일반적인 클릭 이벤트는 실제로 비동기 이벤트 스트림으로 이를 관찰하고 사이드 이펙트를 수행할 수 있다.
-리액티브는 클릭, 호버 이벤트뿐만 아니라, 모든 데이터 스트림을 만들 수 있게한다.
-스트림은 비용이 저렴하며 어디에나 있드며, 무엇이든(변수, 사용자 입력, 속성, 캐시, 자료 구조 등) 스트림이 될 수 있다.
+- 리액티브 프로그래밍은 비동기 데이터 스트림을 사용한 프로그래밍이다.
+- 이벤트 버스 또는 일반적인 클릭 이벤트는 실제로 비동기 이벤트 스트림으로 이를 관찰하고 사이드 이펙트를 수행할 수 있다.
+- 리액티브는 클릭, 호버 이벤트뿐만 아니라, 모든 데이터 스트림을 만들 수 있게한다.
+- 스트림은 비용이 저렴하며 어디에나 있으며, 무엇이든(변수, 사용자 입력, 속성, 캐시, 자료 구조 등) 스트림이 될 수 있다.
+
 - 참고 : https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
-
-
-On top of that, you are given an amazing toolbox of functions to
-combine, create and filter any of those streams. That's where the
-"functional" magic kicks in. A stream can be used as an input to another
-one. Even multiple streams can be used as inputs to another stream. You
-can merge two streams. You can filter a stream to get another one that
-has only those events you are interested in. You can map data values
-from one stream to another new one.
-
-If streams are so central to Reactive, let's take a careful look at
-them, starting with our familiar "clicks on a button" event stream.
-
-Click event stream
-
-A stream is a sequence of ongoing events ordered in time. It can emit
-three different things: a value (of some type), an error, or a
-"completed" signal. Consider that the "completed" takes place, for
-instance, when the current window or view containing that button is
-closed.
-
-We capture these emitted events only asynchronously, by defining a
-function that will execute when a value is emitted, another function
-when an error is emitted, and another function when 'completed' is
-emitted. Sometimes these last two can be omitted and you can just focus
-on defining the function for values. The "listening" to the stream is
-called subscribing. The functions we are defining are observers. The
-stream is the subject (or "observable") being observed. This is
-precisely the Observer Design Pattern.
-
-An alternative way of drawing that diagram is with ASCII, which we will
-use in some parts of this tutorial:
-
-
 
 ### Observer & Observable
 - Observer 객체는 관찰 가능한 시퀸스에 대해 푸시 스타일 반복을 지원한다.

@@ -1,16 +1,11 @@
 'use strict';
 
-var _Rx = Rx,
-    BehaviorSubject = _Rx.BehaviorSubject;
-
-
-var currentNameSubject = new BehaviorSubject('Jaewon');
-var currentName = currentNameSubject.asObservable();
-
-currentNameSubject.subscribe(function (val) {
-  console.log(val);
+var source = Rx.Observable.fromEvent(document, 'click');
+var clicks = source.map(function (e) {
+  return e.timeStamp;
 });
-
-currentNameSubject.next('Wonism');
-
-console.log(currentName);
+// 매 클릭마다 timestamp를 받아온다.
+var subscribe = clicks.subscribe(function (val) {
+  return console.log(source.map, val);
+});
+// output (clicks): 'Event time: 7276.390000000001'
