@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
+
