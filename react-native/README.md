@@ -40,6 +40,9 @@ $ react-native run-ios
 ## 수정
 - `index.ios.js` 파일 수정 후, `Command⌘ + R`로 앱 새로고침하기
 
+## 디버깅
+__iOS__
+- 시뮬레이터가 켜진 상태에서 `command + D` 를 눌러 JS 디버깅을 활성화시킨다.
+
 ## 참고
 - https://facebook.github.io/react-native/
-
