@@ -10,6 +10,9 @@
 
 - 참고 : https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
 
+### Dollar sign `$`
+- 변수 끝의 `$`은 변수가 옵저버블임을 나타내는 컨벤션이다.
+
 ### Observer & Observable
 - Observer 객체는 관찰 가능한 시퀸스에 대해 푸시 스타일 반복을 지원한다.
 - Observer와 Observable, Objects 인터페이스는 옵저버 디자인 패턴이라고도 하는 푸시 기반 알림을 위한 일반화된 매커니즘을 제공한다.
