@@ -38,7 +38,8 @@
 
 ## 리액트 학습 자료
 __Basic__
-~~
+
+<s>
 - [간단한 React JS App 만들기](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/01.simple-react-app.md)
 - [Component 모듈화 하기](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/02.component.md)
 - [props 와 state](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/03.props-state.md)
@@ -46,7 +47,7 @@ __Basic__
 - [컴퍼넌트 생명주기](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/05.component-lifecycle.md)
 - [refs](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/06.refs.md)
 - [리액트 라우터](https://github.com/wonism/TIL/blob/master/front-end/reactjs/chapter/07.router.md)
-~~
+</s>
 
 __Flux__
 - [Flux Tutorial](https://github.com/wonism/TIL/tree/master/front-end/reactjs/flux-tutorial)
