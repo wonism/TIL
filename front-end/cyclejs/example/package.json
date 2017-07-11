@@ -1,0 +1,27 @@
+{
+  "name": "cyclejs",
+  "version": "1.0.0",
+  "description": "> Cycle.js는 RxJS를 기반으로 Reactive한 프로그래밍을 할 수 있게 해주며, 관심사의 분리를 극대화하고 코드를 체계적으로 선언할 수 있는 방법을 제공한다. 또한, 데이터 흐름은 코드에서 분명하게 볼 수 있으며 추적 가능하다. 그리고, Cycle.js로 만들어진 코드는 `this`가 없다는 특징이 있다.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --host 0.0.0.0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cycle/dom": "^17.6.0",
+    "@cycle/run": "^3.1.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "xstream": "^10.8.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-loader": "^1.9.0",
+    "snabbdom-jsx": "^0.3.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
