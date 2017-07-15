@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@cycle/dom": "^17.6.0",
+    "@cycle/http": "^13.3.0",
     "@cycle/run": "^3.1.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "xstream": "^10.8.0"

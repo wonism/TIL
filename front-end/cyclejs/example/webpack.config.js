@@ -4,7 +4,11 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    basic: './src/basic.js',
+    http: './src/http.js',
+    counter: './src/counter.js',
+  },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     inline: true,
@@ -31,6 +35,6 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: '[name]-bundle.js',
   },
 };
