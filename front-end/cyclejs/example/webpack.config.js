@@ -10,6 +10,9 @@ module.exports = {
     counter: './src/counter.js',
     'bmi-app': './src/bmi-app.js',
     'bmi-mvi-app': './src/bmi-mvi-app.js',
+    'modular-bmi-mvi-app': './src/modular-bmi-mvi-app.js',
+    'component-basic': './src/component-basic.js',
+    'component-isolated': './src/component-isolated.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),

@@ -8,22 +8,21 @@ import {
 } from '@cycle/dom';
 import xs from 'xstream';
 
-function renderWeightSlider(weight) {
+function renderSlider(label, value, unit, className, min, max) {
   return (
     <div>
-      <span>Weight : {weight} kg</span>
-      <input className="weight" type="range" min="40" max="140" value={weight} />
+      <span>{label} : {value} {unit}</span>
+      <input className={className} type="range" min={min} max={max} value={value} />
     </div>
   );
 }
 
+function renderWeightSlider(weight) {
+  return renderSlider('Weight', weight, 'kg', 'weight', 40, 140);
+}
+
 function renderHeightSlider(height) {
-  return (
-    <div>
-      <span>Height : {height} cm</span>
-      <input className="height" type="range" min="140" max="210" value={height} />
-    </div>
-  );
+  return renderSlider('Height', height, 'cm', 'height', 140, 210);
 }
 
 function bmi(weight, height) {
@@ -32,29 +31,19 @@ function bmi(weight, height) {
   return Math.round(weight / (heightMeters ** 2));
 }
 
-/**
- * @param  {object} domSource
- * @return {object} actions
- *
- * DOM 이벤트를 유저의 의도된 동작으로 해석하기 위해 사용한다.
- */
+function getSliderEvent(domSource, className) {
+  return domSource.select(`.${className}`)
+    .events('input')
+    .map(e => e.target.value);
+}
+
 function intent(domSource) {
   return {
-    changeWeight$: domSource.select('.weight')
-      .events('input')
-      .map(e => e.target.value),
-    changeHeight$: domSource.select('.height')
-      .events('input')
-      .map(e => e.target.value),
+    changeWeight$: getSliderEvent(domSource, 'weight'),
+    changeHeight$: getSliderEvent(domSource, 'height'),
   };
 }
 
-/**
- * @param  {object} actions
- * @return {object} state$
- *
- * 상태를 관리하기 위해 사용한다.
- */
 function model(actions) {
   const weight$ = actions.changeWeight$.startWith(65);
   const height$ = actions.changeHeight$.startWith(180);
@@ -65,12 +54,7 @@ function model(actions) {
     ));
 }
 
-/**
- * @param  {object} state$
- * @return {object} vdom$
- *
- * model로부터 온 상태를 시각적으료 표한하기 위해 사용한다.
- */
+
 function view(state$) {
   return state$.map(({ weight, height, bmi }) =>
     <div>

@@ -27,6 +27,17 @@ __단점__
 - 새로운 패러다임을 배워야한다.
 - 모든 앱이 리액티브를 필요로 하지는 않다.
 
+## CSS Selectors
+- `DOM.select(selector).events(eventType)`과 같은 표현이 `jQuery`기반 프로그램과 비슷하기 때문에 좋지 않은 패턴일까 염려할 수 있다.
+  - 보통 `React JS` 개발자들은 `<Element onClick={this.handleClick} />`과 같이 이벤트에 대한 이벤트 핸들러를 가상 DOM에 지정하는 것을 선호한다.
+  - 만약, Cycle.js가 `<Element onClick={this.handleClick} />`과 같은 표현을 갖게 된다면, `Views`는 더이상 간단하지 않게 된다.
+    - React JSdㅔ서는 사용자의 행동으로 인해 발생하는 상황을 지정하기 때문이다.
+    - Cycle.js에서 `Views`는 마우스 조작 및 키 입력과 같은 사용자 입력에 대해 알지 못한다. (반응이 없도록 유지하려면, 모델을 시각적으로 표현하기만 하면 된다.)
+- Cycle.js에서 CSS 선택자 기반 이벤트 쿼리를 선택한 것은 정보에 입각한 합리적인 결정이다. 이는 `MVI`를 가능케하며 `reactive`하게 된다. 그리고, `[open/closed 이론](https://en.wikipedia.org/wiki/Open/closed_principle)`에 영감을 받는다.
+- 가상 노드에 새로운 이벤트를 추가하려면, `Views`는 변경하지 않고, `Intent`만 변경하면 된다.
+- `class` 이름은 `View(DOM sink)`와 `Intent(DOM source)`가 동일한 요소를 나타내기 위해 사용할 수 있는 공통된 아티팩트다.
+  - 전역 클래스 이름 충돌의 위험은 `isolate` 헬퍼로 인해 문제가 되지 않는다.
+
 ## Example
 - https://github.com/wonism/TIL/tree/master/front-end/cyclejs/example
 
@@ -47,8 +58,18 @@ DOM Source -> Intent -> Model -> View -> DOM Sink
 __MVI의 구현 예제__
 - https://github.com/wonism/TIL/tree/master/front-end/cyclejs/example
 
+## Component
+- 다른 프레임워크 또는 라이브러리와 마찬가지로 모든 Cycle.js 앱은 더 큰 Cycle.js 앱의 컴퍼넌트로 사용될 수 있다.
+- 컴퍼넌트의 관점에서 볼 때, 부모가 무엇인지는 중요하지 않다. 컴퍼넌트는 source가 자신과 관련된 데이터(props)만 포함한다고 가정해야 하며, 컴퍼넌트의 source와 sink를 분리해야 한다.
+
 ## Dev Tools
 - https://chrome.google.com/webstore/detail/cyclejs/dfgplfmhhmdekalbpejekgfegkonjpfp
+
+## CLI
+```
+$ npm install -g create-cycle-app
+$ create-cycle-app cycle-js-app-name
+```
 
 ## Packages
 - `@cycle/dom` : DOM에서 작동하는 드라이버 모음. snabdom Virtual DOM을 기반으로 하는 DOM 드라이버와 HTML 드라이버를 가진다.
