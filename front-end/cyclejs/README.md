@@ -30,6 +30,23 @@ __단점__
 ## Example
 - https://github.com/wonism/TIL/tree/master/front-end/cyclejs/example
 
+## Model-View-Intent
+- Model : Intent를 관찰 (정보 처리)
+- View : Model을 관찰 (유저에게 출력)
+- Intent : 사용자를 관찰
+
+__main함수의 분할__
+- Cycle.js 앱 전체를 `main` 안에 작성할 수도 있지만, 그것은 좋지 않다. 유지 보수에 어렵기 때문이다. 이 `main`함수는 `MVI`패턴으로 나뉠 수 있다.
+```
+DOM Souce -> main -> DOM Sink
+```
+```
+DOM Source -> Intent -> Model -> View -> DOM Sink
+```
+
+__MVI의 구현 예제__
+- https://github.com/wonism/TIL/tree/master/front-end/cyclejs/example
+
 ## Dev Tools
 - https://chrome.google.com/webstore/detail/cyclejs/dfgplfmhhmdekalbpejekgfegkonjpfp
 

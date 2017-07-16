@@ -8,6 +8,8 @@ module.exports = {
     basic: './src/basic.js',
     http: './src/http.js',
     counter: './src/counter.js',
+    'bmi-app': './src/bmi-app.js',
+    'bmi-mvi-app': './src/bmi-mvi-app.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
