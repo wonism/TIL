@@ -66,6 +66,7 @@ __JavaScript__
   - [Arrow function](https://github.com/wonism/TIL/tree/master/front-end/javascript/arrow-functions.md)
   - [Object.create](https://github.com/wonism/TIL/tree/master/front-end/javascript/object-create.md)
   - [Symbol](https://github.com/wonism/TIL/tree/master/front-end/javascript/symbol.md)
+  - [Async/Await](https://github.com/wonism/TIL/tree/master/front-end/javascript/async-await.md)
 - [JavaScript Patterns](https://github.com/wonism/TIL/tree/master/front-end/jspattern/README.md)
 - [JavaScript Tips](https://github.com/wonism/TIL/tree/master/front-end/js-tips/README.md)
 
