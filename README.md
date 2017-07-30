@@ -158,10 +158,17 @@ __ETC__
 
 [Go to contents](#contents)
 
+<hr />
+
 ### Command Line Interface
 - [CLI](https://github.com/wonism/TIL/tree/master/cli/README.md)
 
 [Go to contents](#contents)
+
+<hr />
+
+### Block chain
+- [0x](https://github.com/wonism/TIL/blob/master/block-chain/0x.md)
 
 <hr />
 <hr />
