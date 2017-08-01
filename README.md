@@ -124,6 +124,7 @@ __ETC__
 - [Syncing forked repository](https://github.com/wonism/TIL/tree/master/github/sync-forked-repository.md)
 - ["Something went wrong" message](https://github.com/wonism/TIL/tree/master/github/something-went-wrong.md)
 - [Github command auto completion](https://github.com/wonism/TIL/tree/master/github/git-command-completion.md)
+- [Make custom command with alias](https://github.com/wonism/TIL/tree/master/github/alias.md)
 
 [Go to contents](#contents)
 
