@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["import"],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
+}
