@@ -271,4 +271,3 @@ class Sample extends Component {
 
 ReactDOM.render(<Sample />, root);
 ```
-

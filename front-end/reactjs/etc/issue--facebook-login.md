@@ -6,6 +6,5 @@ __크로스 브라우징 이슈__
 - 디버깅 결과, `Object.assign` 메소드와 `String.prototype.includes` 메소드 때문이었다.
 
 __해결 방법__
-- `Object.assign` 메소드의 polyfill 을 추가했다.
-- `String.prototype.includes` 는 `String.prototype.match(/regexp/)` 메소드로 변경했다.
-
+- `Object.assign` 메소드의 폴리필, `String.prototype.includes` 메소드의 폴리필을 추가하거나,
+- `import 'babel-polyfill'`을 추가한다.
