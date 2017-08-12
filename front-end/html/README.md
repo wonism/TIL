@@ -6,6 +6,7 @@
   - table 태그와 max-width [(바로 가기)](#table-태그와-max-width)
   - Anchor 태그의 mailto 사용하기 [(바로 가기)](#Anchor-태그의-mailto-사용하기)
   - URL 바 색상 변경하기 [(바로 가기)](#URL-바-색상-변경하기)
+  - Label과 Input [(바로 가기)](#Label과-Input)
 
 ## 태그 관련
 ### 모바일 환경에서 상황에 맞는 키보드 띄우기
@@ -86,3 +87,6 @@ table {
   ...
 ```
 
+### Label과 Input
+- `<label for="id" />`와 `<input id="id" />` 두 가지 요소가 있을 때, 레이블을 클릭하면, 인풋이 클릭된다. `active`외에도 `hover`등의 상태까지도 영향을 주며, 요소의 트리 레벨이 달라도 적용된다.
+- https://jsfiddle.net/jaewon/hwn2x44r/
