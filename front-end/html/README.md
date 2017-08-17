@@ -90,3 +90,34 @@ table {
 ### Label과 Input
 - `<label for="id" />`와 `<input id="id" />` 두 가지 요소가 있을 때, 레이블을 클릭하면, 인풋이 클릭된다. `active`외에도 `hover`등의 상태까지도 영향을 주며, 요소의 트리 레벨이 달라도 적용된다.
 - https://jsfiddle.net/jaewon/hwn2x44r/
+
+### focus 상태의 outline을 없애기
+- `ELEMENT:focus { outline: none; }`과 같은 식으로 포커스 테두리를 없앨 수 있다.
+- 하지만, 마우스나 터치스크린 등의 입력장치를 사용하지 않고, 키보드(`tab`키)를 이용해 요소에 포커스가 간다면, 어느 요소에 포커스 되어 있는 지 알 수 없다.
+- 그럴 떈 이러한 방법을 사용한다.
+- https://jsfiddle.net/jaewon/jk3mgL17/1/
+
+### Video 최적화
+- 미디어쿼리를 통해 불필요한 곳에서는 비디오를 렌더링되지 않도록 한다.
+```css
+@media screen and (max-width: XXXpx) {
+  video {
+    display: none;
+  }
+}
+```
+- 비디오를 압축한다.
+- `<source>`를 통해 크기가 가장 작은 비디오부터 순서대로 명시한다.
+```html
+<video width="400" height="300" controls="controls">
+  <!-- WebM: 10 MB -->
+  <source src="video.webm" type="video/webm" />
+  <!-- MPEG-4/H.264: 12 MB -->
+  <source src="video.mp4" type="video/mp4" />
+  <!-- Ogg/Theora: 13 MB -->
+  <source src="video.ogv" type="video/ogv" />
+</video>
+```
+- 소리가 없는 비디오는 `<video>`태그에 `muted` 속성을 추가한다.
+__참고__
+- http://www.standardista.com/web-performance-video-optimization/
