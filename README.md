@@ -73,6 +73,11 @@ __JavaScript__
 
 [Go to contents](#contents)
 
+__Web Assembly__
+- [WASM with emscripten and React JS](https://github.com/wonism/TIL/tree/master/web-assembly/emscripten/README.md)
+
+[Go to contents](#contents)
+
 __Browser__
 - [Reflow & Repaint](https://github.com/wonism/TIL/blob/master/front-end/browser/reflow-repaint.md)
 - [Critical Rendering Path](https://github.com/wonism/TIL/blob/master/front-end/browser/critical-rendering-path.md)
