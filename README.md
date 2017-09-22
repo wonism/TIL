@@ -41,6 +41,7 @@ __Template Engines__
 
 __CSS__
 - [nth-child vs nth-of-type](https://github.com/wonism/TIL/tree/master/front-end/css/nth-child-nth-of-type.md)
+- [high priority hack](https://github.com/wonism/TIL/tree/master/front-end/css/high-priority-hack.md)
 
 [Go to contents](#contents)
 
