@@ -16,3 +16,19 @@ npx: installed 5 in 16.991s
                 ||----w |
                 ||     ||
 ```
+
+## Publish scoped package
+__package.json__
+```
+{
+  "name": "@SCOPE/PACKAGE_NAME",
+  ...
+}
+```
+
+If want to publish this to public, add this.
+```
+"publishConfig": {
+  "access": "public"
+}
+```
