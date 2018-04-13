@@ -7,7 +7,11 @@ __Ctrl + p Plugin__
   - Ctrl + w + w 또는 Ctrl + w + 화살표 로 창을 왔다갔다 할 수 있음
 
 ## 내 세팅 (.vimrc)
+- https://wonism.github.io/vim-for-fe-dev/ 참고
+
 ```
+"" !!Deprecated
+
 ""
 "" Janus setup
 ""
